@@ -165,18 +165,18 @@ p {
 }
 
 .alien-eye {
-    position: absolute;
     width: 15px;
     height: 15px;
     left: 44%;
     top: 35%;
+    position: absolute;
 }
 
 .alien-planets {
-    position: absolute;
     height: 80%;
     left: 30px;
     top: 20px;
+    position: absolute;
     z-index: 10;
 }
 
