@@ -1,0 +1,372 @@
+@font-face {
+    font-family: 'Gputeks';
+    src: url('../font/Gputeks-Regular.woff') format('woff'),
+        url('../font/Gputeks-Regular.woff2') format('woff2');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gputeks', sans-serif;
+}
+
+html {
+    font-size: 30px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 6rem;
+    line-height: 6rem;
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1rem;
+}
+
+.side-nav {
+    display: flex;
+    height: calc(100vh - 162px);
+    width: 138px;
+    margin: 81px 0;
+    padding: 50px 30px;
+    background-color: #3E4761;
+    color: white;
+    position: fixed;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.side-nav:hover {
+    width: 430px;
+}
+
+.nav-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-text {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    margin-top: 170px;
+    font-size: 0.5rem;
+}
+
+.nav-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 32px;
+}
+
+.nav-items {
+    list-style-type: none;
+    margin-bottom: 200px;
+}
+
+.nav-item {
+    margin: 82px 0;
+    white-space: nowrap;
+}
+
+.nav-item>a {
+    text-decoration: none;
+    color: unset;
+}
+
+.header {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    color: white;
+}
+
+.header__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 160px);
+    margin: 80px 70px;
+    position: absolute;
+    z-index: 10;
+}
+
+.header__btn {
+    text-decoration: none;
+    color: unset;
+    background-color: #39435E;
+    width: 440px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+}
+
+.header__bg {
+    background-color: #222735;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.header__planet {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.header__rocket {
+    position: absolute;
+    left: 600px;
+    top: 535.1px;
+}
+
+.about-planet {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    padding: 100px 70px;
+    background: linear-gradient(0deg, #2B344B 0%, #212633 100%);
+    ;
+    color: white;
+    overflow: hidden;
+}
+
+.about-left {
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.alien {
+    width: 155px;
+    height: 197px;
+    left: 200px;
+    top: 300px;
+    position: absolute;
+    background: url('../img/section-2-alien.svg') center/cover no-repeat;
+}
+
+.alien-eye {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 44%;
+    top: 35%;
+}
+
+.alien-planets {
+    position: absolute;
+    height: 80%;
+    left: 30px;
+    top: 20px;
+    z-index: 10;
+}
+
+.about-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    padding-right: 138px;
+}
+
+.about-title {
+    margin-bottom: 70px;
+}
+
+.how-people {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background: url('../img/section-3-bg.svg') bottom/100% no-repeat, linear-gradient(358.26deg, #242A3A -2.15%, #2A3348 98%);
+    color: white;
+    position: relative;
+}
+
+.how-people__top {
+    padding: 80px 70px;
+}
+
+.how-people__content {
+    display: flex;
+    margin-top: 60px;
+    z-index: 10;
+}
+
+.how-people__text {
+    width: 40%;
+    line-height: 50px;
+}
+
+.how-people__rovers {
+    display: flex;
+    justify-content: space-around;
+    padding-right: 138px;
+    width: 60%;
+    text-align: center;
+}
+
+.how-people__rover-item {
+    list-style-type: none;
+}
+
+.how-people__rover-icon {
+    width: 101px;
+    height: 95px;
+}
+
+.how-people__rover-text {
+    margin-top: 44px;
+    font-size: 0.5rem;
+}
+
+.how-people__bottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.bg-rover {
+    position: absolute;
+    bottom: 8%;
+    left: 45%;
+    width: 23%;
+}
+
+.bg-alien {
+    position: absolute;
+    bottom: 8%;
+    left: -4%;
+    width: 20%;
+}
+
+.additions {
+    height: 100vh;
+    width: 100%;
+    background: url('../img/section-4-mars.svg') center no-repeat #FFB762;
+}
+
+.addition__title {
+    text-align: center;
+    padding-top: 80px;
+}
+
+.satelites-box {
+    position: relative;
+    height: 78%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.satelites-orbit {
+    width: 617px;
+    height: 617px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.satelites-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.phobos-container {
+    position: absolute;
+    text-align: center;
+    left: -5%;
+    bottom: 20%;
+}
+
+.deimos-container {
+    position: absolute;
+    text-align: center;
+    left: 20%;
+    bottom: -8%;
+}
+
+.earth-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100%;
+    background: #293246;
+    color: white;
+}
+
+.earth__header {
+    background: url('../img/section-5-bg-top.svg') center/cover no-repeat;
+    height: 30%;
+}
+
+.earth__content {
+    display: flex;
+    height: 40%;
+    width: 100%;
+    padding: 80px 100px;
+}
+
+.earth__text {
+    width: 60%;
+    line-height: 99px;
+    font-weight: 500;
+}
+
+.earth__img {
+    width: 8%;
+    margin-left: 5%;
+}
+
+.earth__footer {
+    background: url('../img/section-5-bg-bottom-earth.svg') center/cover no-repeat;
+    height: 30%;
+    width: 100%;
+    position: relative;
+}
+
+.earth__btn {
+    padding: 30px 50px;
+    line-height: 50px;
+    text-decoration: none;
+    color: unset;
+    background: #394C76;
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFB876;
+    height: 30vh;
+    width: 100%;
+}
