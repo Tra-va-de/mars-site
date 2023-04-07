@@ -91,7 +91,7 @@ p {
 
 .header {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     position: relative;
     color: white;
 }
@@ -134,8 +134,9 @@ p {
 
 .header__rocket {
     position: absolute;
-    left: 600px;
+    right: 600px;
     top: 535.1px;
+    animation: header-rocket-fly 5s linear 1s 1 both;
 }
 
 .about-planet {
@@ -144,7 +145,6 @@ p {
     width: 100vw;
     padding: 100px 70px;
     background: linear-gradient(0deg, #2B344B 0%, #212633 100%);
-    ;
     color: white;
     overflow: hidden;
 }
@@ -369,4 +369,24 @@ p {
     background: #FFB876;
     height: 30vh;
     width: 100%;
+}
+
+@keyframes header-rocket-fly {
+    0% {
+        top: 100%;
+        right: 1100px;
+        transform: rotate(90deg);
+    }
+
+    40% {
+        top: 0px;
+        right: 600px;
+        transform: rotate(45deg);
+    }
+
+    100% {
+        top: 500px;
+        right: 400px;
+        transform: rotate(0);
+    }
 }
