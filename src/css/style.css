@@ -309,7 +309,7 @@ p {
     bottom: -8%;
 }
 
-.earth-section {
+.earth {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
