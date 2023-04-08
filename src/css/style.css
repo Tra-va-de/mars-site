@@ -54,37 +54,37 @@ p {
     width: 430px;
 }
 
-.nav-left {
+.side-nav__left {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.nav-text {
+.side-nav__text {
     writing-mode: vertical-lr;
     text-orientation: upright;
     margin-top: 170px;
     font-size: 0.5rem;
 }
 
-.nav-right {
+.side-nav__right {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-left: 32px;
 }
 
-.nav-items {
+.side-nav__items {
     list-style-type: none;
     margin-bottom: 200px;
 }
 
-.nav-item {
+.side-nav__item {
     margin: 82px 0;
     white-space: nowrap;
 }
 
-.nav-item>a {
+.side-nav__item>a {
     text-decoration: none;
     color: unset;
 }
@@ -149,7 +149,7 @@ p {
     overflow: hidden;
 }
 
-.about-left {
+.about-planet__left {
     width: 50%;
     height: 100%;
     position: relative;
@@ -164,7 +164,7 @@ p {
     background: url('../img/section-2-alien.svg') center/cover no-repeat;
 }
 
-.alien-eye {
+.alien__eye {
     width: 15px;
     height: 15px;
     left: 44%;
@@ -172,7 +172,7 @@ p {
     position: absolute;
 }
 
-.alien-planets {
+.alien__planets {
     height: 80%;
     left: 30px;
     top: 20px;
@@ -180,7 +180,7 @@ p {
     z-index: 10;
 }
 
-.about-right {
+.about-planet__right {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -189,7 +189,7 @@ p {
     padding-right: 138px;
 }
 
-.about-title {
+.about-planet__title {
     margin-bottom: 70px;
 }
 
@@ -248,14 +248,14 @@ p {
     height: 100%;
 }
 
-.bg-rover {
+.how-people__rover {
     position: absolute;
     bottom: 8%;
     left: 45%;
     width: 23%;
 }
 
-.bg-alien {
+.how-people__alien {
     position: absolute;
     bottom: 8%;
     left: -4%;
@@ -273,7 +273,7 @@ p {
     padding-top: 80px;
 }
 
-.satelites-box {
+.additions__box {
     position: relative;
     height: 78%;
     width: 100%;
@@ -282,27 +282,27 @@ p {
     align-items: center;
 }
 
-.satelites-orbit {
+.planet-orbit {
     width: 617px;
     height: 617px;
     border: 2px solid white;
     border-radius: 50%;
 }
 
-.satelites-img {
+.additions__planets {
     position: relative;
     width: 100%;
     height: 100%;
 }
 
-.phobos-container {
+.phobos {
     position: absolute;
     text-align: center;
     left: -5%;
     bottom: 20%;
 }
 
-.deimos-container {
+.deimos {
     position: absolute;
     text-align: center;
     left: 20%;
