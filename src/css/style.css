@@ -127,15 +127,20 @@ p {
 }
 
 .header__planet {
+    width: 60%;
+    max-height: 50%;
+    min-height: 40%;
     position: absolute;
     right: 0;
     bottom: 0;
 }
 
 .header__rocket {
+    max-width: 20%;
+    max-height: 20%;
     position: absolute;
-    right: 600px;
-    top: 535.1px;
+    right: 70%;
+    bottom: -20%;
     animation: header-rocket-fly 5s linear 1s 1 both;
 }
 
@@ -373,20 +378,20 @@ p {
 
 @keyframes header-rocket-fly {
     0% {
-        top: 100%;
-        right: 1100px;
+        bottom: -20%;
+        right: 70%;
         transform: rotate(90deg);
     }
 
     40% {
-        top: 0px;
-        right: 600px;
+        bottom: 60%;
+        right: 40%;
         transform: rotate(45deg);
     }
 
     100% {
-        top: 500px;
-        right: 400px;
+        bottom: 20%;
+        right: 30%;
         transform: rotate(0);
     }
 }
