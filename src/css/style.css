@@ -341,6 +341,7 @@ p {
     top: 50%;
     transform: translate(-50%, -50%);
     aspect-ratio: 1;
+    animation: orbit-rotation 4s linear infinite both;
 }
 
 .phobos {
@@ -351,6 +352,7 @@ p {
     position: absolute;
     left: -5%;
     bottom: 20%;
+    animation: phobos-rotation 4s linear infinite both;
 }
 
 .phobos .phobos__img {
@@ -367,6 +369,7 @@ p {
     top: 92%;
     left: 25%;
     transform: translate(-50%, -14.15%);
+    animation: deimos-rotation 4s linear infinite both;
 }
 
 .deimos .deimos__img {
@@ -531,6 +534,60 @@ p {
 
     100% {
         left: 120%;
+    }
+}
+
+@keyframes orbit-rotation {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes deimos-rotation {
+    0% {
+        transform: translate(-50%, -25%) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(-50%, -50%) rotate(-90deg);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) rotate(-180deg);
+    }
+
+    75% {
+        transform: translate(-50%, -25%) rotate(-270deg);
+    }
+
+    100% {
+        transform: translate(-50%, -25%) rotate(-360deg);
+    }
+}
+
+@keyframes phobos-rotation {
+    0% {
+        transform: translate(0%, -25%) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(0%, -50%) rotate(-90deg);
+    }
+
+    50% {
+        transform: translate(0%, -50%) rotate(-180deg);
+    }
+
+    75% {
+        transform: translate(-20%, -25%) rotate(-270deg);
+    }
+
+    100% {
+        transform: translate(0%, -25%) rotate(-360deg);
     }
 }
 
