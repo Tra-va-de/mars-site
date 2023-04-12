@@ -289,6 +289,7 @@ p {
     left: 9.68%;
     bottom: 53.47%;
     transform: translate(-50%, 50%);
+    animation: how-people-alien-motion 5s linear infinite 5s both;
 }
 
 .additions {
@@ -437,6 +438,20 @@ p {
 
     100% {
         transform: translate(-50%, 50%);
+    }
+}
+
+@keyframes how-people-alien-motion {
+    0% {
+        left: -15%;
+    }
+
+    65% {
+        left: 20%
+    }
+
+    100% {
+        left: 100%
     }
 }
 
