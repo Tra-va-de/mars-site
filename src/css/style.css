@@ -148,7 +148,7 @@ p {
     display: flex;
     height: 100vh;
     width: 100vw;
-    padding: 100px 70px;
+    /* padding: 100px 70px; */
     background: linear-gradient(0deg, #2B344B 0%, #212633 100%);
     color: white;
     overflow: hidden;
@@ -157,32 +157,46 @@ p {
 .about-planet__left {
     width: 50%;
     height: 100%;
+}
+
+.about-planet__picture {
+    max-width: 80%;
+    max-height: 90%;
     position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    aspect-ratio: 646/871;
+}
+
+.about-planet__planets {
+    background: url('../img/section-2-planets.svg') center / contain no-repeat;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
 }
 
 .alien {
-    width: 155px;
-    height: 197px;
-    left: 200px;
-    top: 300px;
+    background: url('../img/section-2-alien.svg') center/contain no-repeat;
+    width: 23.99%;
+    max-height: 22.11%;
     position: absolute;
-    background: url('../img/section-2-alien.svg') center/cover no-repeat;
+    left: 41.41%;
+    bottom: 58.95%;
+    transform: translate(-50%, 50%);
+    aspect-ratio: 155/197;
 }
 
 .alien__eye {
-    width: 15px;
-    height: 15px;
-    left: 44%;
-    top: 35%;
+    width: 9%;
+    max-height: 7%;
     position: absolute;
-}
-
-.alien__planets {
-    height: 80%;
-    left: 30px;
-    top: 20px;
-    position: absolute;
-    z-index: 10;
+    left: 48.71%;
+    bottom: 61.17%;
+    transform: translate(-50%, 50%);
+    aspect-ratio: 1;
 }
 
 .about-planet__right {
