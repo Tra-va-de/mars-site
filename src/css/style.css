@@ -148,7 +148,6 @@ p {
     display: flex;
     height: 100vh;
     width: 100vw;
-    /* padding: 100px 70px; */
     background: linear-gradient(0deg, #2B344B 0%, #212633 100%);
     color: white;
     overflow: hidden;
@@ -220,9 +219,9 @@ p {
     height: 100vh;
     width: 100%;
     padding: 80px 70px;
-    background: url('../img/section-3-bg.svg') bottom/100% no-repeat, linear-gradient(358.26deg, #242A3A -2.15%, #2A3348 98%);
     color: white;
     position: relative;
+    background: linear-gradient(358.26deg, #242A3A -2.15%, #2A3348 98%);
 }
 
 .how-people__top {
@@ -266,25 +265,30 @@ p {
 }
 
 .how-people__bottom {
+    background: url('../img/section-3-bg.svg') bottom/100% no-repeat;
+    width: 100%;
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 100%;
-    height: 100%;
+    aspect-ratio: 1932.5 / 596.67;
 }
 
 .how-people__rover {
+    max-width: 24.51%;
+    max-height: 70.22%;
     position: absolute;
-    bottom: 8%;
     left: 45%;
-    width: 23%;
+    bottom: 50.87%;
+    transform: translate(-50%, 50%);
 }
 
 .how-people__alien {
+    max-width: 21.64%;
+    max-height: 84.14%;
     position: absolute;
-    bottom: 8%;
-    left: -4%;
-    width: 20%;
+    left: 9.68%;
+    bottom: 53.47%;
+    transform: translate(-50%, 50%);
 }
 
 .additions {
