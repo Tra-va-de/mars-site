@@ -333,7 +333,7 @@ p {
 }
 
 .additions__orbit {
-    border: 2px solid white;
+    border: 5px solid white;
     border-radius: 50%;
     width: 160%;
     position: absolute;
@@ -344,17 +344,40 @@ p {
 }
 
 .phobos {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% / 160 * 100 * 95 / 410.88);
     position: absolute;
     left: -5%;
     bottom: 20%;
 }
 
+.phobos .phobos__img {
+    width: 100%;
+    aspect-ratio: 95 / 97;
+}
+
 .deimos {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% / 160 * 100 * 60 / 410.88);
     position: absolute;
-    left: 20%;
-    bottom: -8%;
+    top: 92%;
+    left: 25%;
+    transform: translate(-50%, -14.15%);
+}
+
+.deimos .deimos__img {
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+.planet-text {
+    text-align: center;
+    line-height: 50px;
+    letter-spacing: 0.52em;
 }
 
 .earth {
@@ -471,7 +494,7 @@ p {
     50% {
         left: 120%;
     }
-    
+
     100% {
         left: 120%;
     }
@@ -486,25 +509,26 @@ p {
         left: 70%;
         transform: translate(-50%, 50%) rotateY(0deg);
     }
-    
+
     18% {
         transform: translate(-50%, 50%) rotateY(180deg);
     }
-    
-    34%, 48% {
+
+    34%,
+    48% {
         left: 50%;
         transform: translate(-50%, 50%) rotateY(180deg);
     }
-    
+
     49% {
         left: 50%;
         transform: translate(-50%, 50%) rotateY(0deg);
     }
-    
+
     60% {
         left: 120%;
     }
-    
+
     100% {
         left: 120%;
     }
@@ -549,5 +573,18 @@ p {
     .how-people__rovers {
         width: 100%;
         margin-top: 60px;
+    }
+}
+
+@media screen and ((max-width: 992px) or (max-height: 940px)) {
+    .additions__orbit {
+        border: 3px solid white;
+    }
+
+    .planet-text {
+        /* display: none; */
+        font-size: 0.5rem;
+        line-height: 30px;
+        letter-spacing: 0.3em;
     }
 }
