@@ -219,46 +219,50 @@ p {
     flex-direction: column;
     height: 100vh;
     width: 100%;
+    padding: 80px 70px;
     background: url('../img/section-3-bg.svg') bottom/100% no-repeat, linear-gradient(358.26deg, #242A3A -2.15%, #2A3348 98%);
     color: white;
     position: relative;
 }
 
 .how-people__top {
-    padding: 80px 70px;
+    margin-bottom: 60px;
 }
 
 .how-people__content {
     display: flex;
     margin-top: 60px;
+    padding-right: 138px;
     z-index: 10;
 }
 
 .how-people__text {
     width: 40%;
     line-height: 50px;
+    margin-right: 100px;
 }
 
 .how-people__rovers {
     display: flex;
-    justify-content: space-around;
-    padding-right: 138px;
+    justify-content: space-between;
     width: 60%;
-    text-align: center;
 }
 
 .how-people__rover-item {
     list-style-type: none;
+    max-width: 20%;
+    margin-left: 10px;
 }
 
 .how-people__rover-icon {
-    width: 101px;
-    height: 95px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .how-people__rover-text {
     margin-top: 44px;
     font-size: 0.5rem;
+    text-align: center;
 }
 
 .how-people__bottom {
@@ -429,5 +433,47 @@ p {
 
     100% {
         transform: translate(-50%, 50%);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    h1 {
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+
+    p {
+        font-size: 0.7rem;
+        line-height: 0.7rem;
+    }
+
+    .how-people__rover-item {
+        max-width: 17%;
+    }
+
+    .how-people__text {
+        width: 40%;
+        line-height: 40px;
+        margin-right: 60px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .how-people__content {
+        flex-direction: column;
+    }
+
+    .how-people__text {
+        width: 100%;
+    }
+
+    .how-people__rovers {
+        width: 100%;
+        margin-top: 60px;
     }
 }
