@@ -197,6 +197,7 @@ p {
     bottom: 61.17%;
     transform: translate(-50%, 50%);
     aspect-ratio: 1;
+    animation: alien-eye-motion 2s infinite both;
 }
 
 .about-planet__right {
@@ -407,5 +408,19 @@ p {
         bottom: 20%;
         right: 30%;
         transform: rotate(0);
+    }
+}
+
+@keyframes alien-eye-motion {
+    0% {
+    transform: translate(-140%, 50%);        
+    }
+
+    50% {
+        transform: translate(30%, 50%);
+    }
+
+    100% {
+        transform: translate(-140%, 50%);
     }
 }
