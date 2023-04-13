@@ -389,20 +389,28 @@ p {
     justify-content: space-between;
     height: 100vh;
     width: 100%;
+    padding: 80px 100px;
     background: #293246;
     color: white;
+    position: relative;
 }
 
 .earth__header {
     background: url('../img/section-5-bg-top.svg') center/cover no-repeat;
-    height: 30%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    aspect-ratio: 1921.5 / 330.76;
 }
 
 .earth__content {
     display: flex;
-    height: 40%;
+    align-items: center;
+    height: 100%;
     width: 100%;
-    padding: 80px 100px;
+    position: absolute;
+    z-index: 10;
 }
 
 .earth__text {
@@ -411,16 +419,18 @@ p {
     font-weight: 500;
 }
 
-.earth__img {
+.earth__rocket-img {
     width: 8%;
     margin-left: 5%;
 }
 
 .earth__footer {
     background: url('../img/section-5-bg-bottom-earth.svg') center/cover no-repeat;
-    height: 30%;
     width: 100%;
-    position: relative;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    aspect-ratio: 1914 / 301.4;
 }
 
 .earth__btn {
@@ -430,9 +440,9 @@ p {
     color: unset;
     background: #394C76;
     position: absolute;
-    bottom: 100px;
+    bottom: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, 50%);
     white-space: nowrap;
 }
 
@@ -593,18 +603,18 @@ p {
 
 @media screen and (max-width: 1200px) {
     h1 {
-        font-size: 4rem;
-        line-height: 4rem;
+        font-size: 5rem;
+        line-height: 5rem;
     }
 
     h2 {
-        font-size: 1.5rem;
-        line-height: 1.5rem;
+        font-size: 1.75rem;
+        line-height: 1.75rem;
     }
 
     p {
-        font-size: 0.7rem;
-        line-height: 0.7rem;
+        font-size: 0.75rem;
+        line-height: 0.75rem;
     }
 
     .how-people__rover-item {
@@ -616,9 +626,34 @@ p {
         line-height: 40px;
         margin-right: 60px;
     }
+
+    .earth__text {
+        line-height: 75px;
+    }
+    
+    .earth__btn {
+        padding: 20px 30px;
+        line-height: 30px;
+        font-size: 0.75rem;
+    }
 }
 
 @media screen and (max-width: 992px) {
+    h1 {
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+
+    p {
+        font-size: 0.5rem;
+        line-height: 0.5rem;
+    }
+
     .how-people__content {
         flex-direction: column;
     }
@@ -630,6 +665,15 @@ p {
     .how-people__rovers {
         width: 100%;
         margin-top: 60px;
+    }
+
+    .earth__text {
+        line-height: 60px;
+    }
+    
+    .earth__btn {
+        padding: 10px 20px;
+        font-size: 0.55rem;
     }
 }
 
