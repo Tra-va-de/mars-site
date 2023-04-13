@@ -226,13 +226,13 @@ p {
 
 .how-people__top {
     margin-bottom: 60px;
+    z-index: 10;
 }
 
 .how-people__content {
     display: flex;
     margin-top: 60px;
     padding-right: 138px;
-    z-index: 10;
 }
 
 .how-people__text {
@@ -639,9 +639,14 @@ p {
     }
 
     .planet-text {
-        /* display: none; */
         font-size: 0.5rem;
         line-height: 30px;
         letter-spacing: 0.3em;
+    }
+}
+
+@media screen and ((max-width: 768px) or (max-height: 720px)) {
+    .planet-text {
+        display: none;
     }
 }
