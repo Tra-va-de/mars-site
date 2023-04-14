@@ -36,13 +36,13 @@ p {
 
 .side-nav {
     display: flex;
-    height: calc(100vh - 162px);
-    width: 7.19%;
-    margin: 81px 0;
-    padding: 50px 30px;
+    height: calc(100vh - 9.9vh);
+    width: 22.4%;
+    padding: 5.45% 0;
     position: fixed;
     right: 0;
-    top: 0;
+    top: 50%;
+    transform: translate(67.91%, -50%);
     background-color: #3E4761;
     color: white;
     transition: 0.3s;
@@ -51,37 +51,54 @@ p {
 }
 
 .side-nav:hover {
-    width: 430px;
+    transform: translate(0, -50%);
 }
 
 .side-nav__left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 32.09%;
+    height: 100%;
+    position: relative;
+}
+
+.side-nav__logo {
+    display: inline-block;
+    width: 33.33%;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    aspect-ratio: 1;
+}
+
+.side-nav__logo-img {
     width: 100%;
 }
 
 .side-nav__text {
     writing-mode: vertical-lr;
     text-orientation: upright;
-    margin-top: 170px;
+    margin-top: 22.76%;
     font-size: 0.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .side-nav__right {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 32px;
+    width: calc(100% - 32.09%);
 }
 
 .side-nav__items {
     list-style-type: none;
-    margin-bottom: 200px;
+    /* margin-bottom: 200px; */
 }
 
 .side-nav__item {
-    margin: 82px 0;
+    margin: 20% 0;
     white-space: nowrap;
 }
 
@@ -93,6 +110,7 @@ p {
 .header {
     height: 100vh;
     width: 100%;
+    padding: 7.41% 7.19%;
     position: relative;
     color: white;
     overflow: hidden;
@@ -103,7 +121,7 @@ p {
     flex-direction: column;
     justify-content: space-between;
     height: calc(100% - 160px);
-    margin: 80px 70px;
+    /* margin: 80px 70px; */
     position: absolute;
     z-index: 10;
 }
@@ -643,18 +661,14 @@ p {
         font-size: 0.75rem;
     }
 
-    .side-nav:hover {
-        width: 350px;
-    }
-
-    .side-nav__logo-img {
+    /* .side-nav__logo-img {
         width: 40px;
     }
 
     .side-nav__item {
         margin: 50px 0;
         white-space: nowrap;
-    }
+    } */
 }
 
 @media screen and (max-width: 992px) {
