@@ -84,7 +84,7 @@ p {
     white-space: nowrap;
 }
 
-.side-nav__item>a {
+.side-nav__item-link {
     text-decoration: none;
     color: unset;
 }
@@ -341,7 +341,7 @@ p {
     top: 50%;
     transform: translate(-50%, -50%);
     aspect-ratio: 1;
-    animation: orbit-rotation 4s linear infinite both;
+    animation: orbit-rotation 12s linear infinite both;
 }
 
 .phobos {
@@ -352,10 +352,10 @@ p {
     position: absolute;
     left: -5%;
     bottom: 20%;
-    animation: phobos-rotation 4s linear infinite both;
+    animation: phobos-rotation 12s linear infinite both;
 }
 
-.phobos .phobos__img {
+.phobos__img {
     width: 100%;
     aspect-ratio: 95 / 97;
 }
@@ -369,10 +369,10 @@ p {
     top: 92%;
     left: 25%;
     transform: translate(-50%, -14.15%);
-    animation: deimos-rotation 4s linear infinite both;
+    animation: deimos-rotation 12s linear infinite both;
 }
 
-.deimos .deimos__img {
+.deimos__img {
     width: 100%;
     aspect-ratio: 1;
 }
@@ -393,6 +393,7 @@ p {
     background: #293246;
     color: white;
     position: relative;
+    overflow: hidden;
 }
 
 .earth__header {
