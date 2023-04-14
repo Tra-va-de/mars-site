@@ -37,7 +37,9 @@ p {
 .side-nav {
     display: flex;
     height: calc(100vh - 9.9vh);
+    max-height: 700px;
     width: 22.4%;
+    min-width: 430px;
     padding: 5.45% 0;
     position: fixed;
     right: 0;
@@ -55,8 +57,10 @@ p {
 }
 
 .side-nav__left {
-    width: 32.09%;
+    width: 32.093%;
+    /* min-width: 138px; */
     height: 100%;
+    padding: 0 30px;
     position: relative;
 }
 
@@ -64,9 +68,9 @@ p {
     display: inline-block;
     width: 33.33%;
     position: absolute;
-    top: 10%;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -250%);
     aspect-ratio: 1;
 }
 
@@ -89,12 +93,12 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-grow: 1;
     width: calc(100% - 32.09%);
 }
 
 .side-nav__items {
     list-style-type: none;
-    /* margin-bottom: 200px; */
 }
 
 .side-nav__item {
