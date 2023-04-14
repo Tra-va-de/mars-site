@@ -94,6 +94,7 @@ p {
     width: 100%;
     position: relative;
     color: white;
+    overflow: hidden;
 }
 
 .header__content {
@@ -222,6 +223,7 @@ p {
     color: white;
     position: relative;
     background: linear-gradient(358.26deg, #242A3A -2.15%, #2A3348 98%);
+    overflow: hidden;
 }
 
 .how-people__top {
@@ -298,6 +300,7 @@ p {
     width: 100%;
     padding: 80px 0;
     background: #FFB762;
+    overflow: hidden;
 }
 
 .addition__top {
@@ -454,6 +457,7 @@ p {
     background: #FFB876;
     height: 30vh;
     width: 100%;
+    overflow: hidden;
 }
 
 @keyframes header-rocket-fly {
