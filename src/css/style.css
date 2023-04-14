@@ -252,6 +252,7 @@ p {
 
 .how-people__rover-item {
     list-style-type: none;
+    width: fit-content;
     max-width: 20%;
     margin-left: 10px;
 }
@@ -628,7 +629,6 @@ p {
     }
 
     .how-people__text {
-        width: 40%;
         line-height: 40px;
         margin-right: 60px;
     }
@@ -686,6 +686,11 @@ p {
         margin-top: 60px;
     }
 
+    .how-people__rover-item {
+        min-width: 25%;
+        margin: 0 10px;
+    }
+
     .earth__text {
         line-height: 60px;
     }
@@ -693,6 +698,12 @@ p {
     .earth__btn {
         padding: 10px 20px;
         font-size: 0.55rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .how-people__rover-text {
+       word-wrap: break-word;
     }
 }
 
