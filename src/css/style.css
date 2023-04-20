@@ -490,13 +490,16 @@ p {
 }
 
 .footer {
+    background: #FFB876;
+    height: 30vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.footer__content {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #FFB876;
-    height: 30vh;
-    width: 100%;
-    overflow: hidden;
 }
 
 @keyframes header-rocket-fly {
@@ -645,119 +648,3 @@ p {
     }
 }
 
-@media screen and (max-width: 1200px) {
-    h1 {
-        font-size: 5rem;
-        line-height: 5rem;
-    }
-
-    h2 {
-        font-size: 1.7rem;
-        line-height: 1.7rem;
-    }
-
-    p {
-        font-size: 0.75rem;
-        line-height: 0.75rem;
-    }
-
-    .how-people__rover-item {
-        max-width: 17%;
-    }
-
-    .how-people__text {
-        line-height: 40px;
-        margin-right: 60px;
-    }
-
-    .earth__text {
-        line-height: 75px;
-    }
-
-    .earth__btn {
-        padding: 20px 30px;
-        line-height: 30px;
-        font-size: 0.75rem;
-    }
-
-    /* .side-nav__logo-img {
-        width: 40px;
-    }
-
-    .side-nav__item {
-        margin: 50px 0;
-        white-space: nowrap;
-    } */
-}
-
-@media screen and (max-width: 992px) {
-    h1 {
-        font-size: 4rem;
-        line-height: 4rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-        line-height: 1.5rem;
-    }
-
-    p {
-        font-size: 0.5rem;
-        line-height: 0.5rem;
-    }
-
-    .side-nav {
-        min-width: 300px;
-    }
-
-    .how-people__content {
-        flex-direction: column;
-    }
-
-    .how-people__text {
-        width: 100%;
-    }
-
-    .how-people__rovers {
-        width: 100%;
-        margin-top: 60px;
-    }
-
-    .how-people__rover-item {
-        min-width: 25%;
-        margin: 0 10px;
-    }
-
-    .earth__text {
-        line-height: 60px;
-    }
-
-    .earth__btn {
-        padding: 10px 20px;
-        font-size: 0.55rem;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .how-people__rover-text {
-        word-wrap: break-word;
-    }
-}
-
-@media screen and ((max-width: 992px) or (max-height: 940px)) {
-    .additions__orbit {
-        border: 3px solid white;
-    }
-
-    .planet-text {
-        font-size: 0.5rem;
-        line-height: 30px;
-        letter-spacing: 0.3em;
-    }
-}
-
-@media screen and ((max-width: 768px) or (max-height: 720px)) {
-    .planet-text {
-        display: none;
-    }
-}
