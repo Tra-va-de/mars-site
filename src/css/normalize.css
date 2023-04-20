@@ -30,14 +30,14 @@ h2 {
     /* font-size: 2rem;
     line-height: 99px; */
     font-size: calc(1rem + 30 * ((100vw - 320px) / (1920 - 320)));
-    /* line-height: calc(); */
+    line-height: calc(1rem + 30 * ((100vw - 320px) / (1920 - 320)));
 }
 
-p {
+p, a {
     /* font-size: 1rem;
     line-height: 50px; */
     font-size: calc(0.6rem + 12 * ((100vw - 320px) / (1920 - 320)));
-    /* line-height: calc(30px + 20 * ((100vw - 320px) / (1920 - 320))); */
+    line-height: calc(0.6rem + 12 * ((100vw - 320px) / (1920 - 320)));
 }
 
 .container {
