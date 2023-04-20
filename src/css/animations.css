@@ -1,0 +1,146 @@
+@keyframes header-rocket-fly {
+    0% {
+        bottom: -20%;
+        right: 70%;
+        transform: rotate(90deg);
+    }
+
+    40% {
+        bottom: 60%;
+        right: 40%;
+        transform: rotate(45deg);
+    }
+
+    100% {
+        bottom: 20%;
+        right: 30%;
+        transform: rotate(0);
+    }
+}
+
+@keyframes alien-eye-motion {
+    0% {
+        transform: translate(-140%, 50%);
+    }
+
+    100% {
+        transform: translate(30%, 50%);
+    }
+}
+
+@keyframes alien-motion {
+    0% {
+        transform: translate(-50%, 130%);
+    }
+
+    100% {
+        transform: translate(-50%, 50%);
+    }
+}
+
+@keyframes how-people-alien-motion {
+    0% {
+        left: -15%;
+    }
+
+    32.5% {
+        left: 20%;
+    }
+
+    50% {
+        left: 120%;
+    }
+
+    100% {
+        left: 120%;
+    }
+}
+
+@keyframes how-people-rover-motion {
+    0% {
+        left: -15%;
+    }
+
+    17% {
+        left: 70%;
+        transform: translate(-50%, 50%) rotateY(0deg);
+    }
+
+    18% {
+        transform: translate(-50%, 50%) rotateY(180deg);
+    }
+
+    34%,
+    48% {
+        left: 50%;
+        transform: translate(-50%, 50%) rotateY(180deg);
+    }
+
+    49% {
+        left: 50%;
+        transform: translate(-50%, 50%) rotateY(0deg);
+    }
+
+    60% {
+        left: 120%;
+    }
+
+    100% {
+        left: 120%;
+    }
+}
+
+@keyframes orbit-rotation {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes deimos-rotation {
+    0% {
+        transform: translate(-50%, -25%) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(-50%, -50%) rotate(-90deg);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) rotate(-180deg);
+    }
+
+    75% {
+        transform: translate(-50%, -25%) rotate(-270deg);
+    }
+
+    100% {
+        transform: translate(-50%, -25%) rotate(-360deg);
+    }
+}
+
+@keyframes phobos-rotation {
+    0% {
+        transform: translate(0%, -25%) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(0%, -50%) rotate(-90deg);
+    }
+
+    50% {
+        transform: translate(0%, -50%) rotate(-180deg);
+    }
+
+    75% {
+        transform: translate(-20%, -25%) rotate(-270deg);
+    }
+
+    100% {
+        transform: translate(0%, -25%) rotate(-360deg);
+    }
+}
+

@@ -1,0 +1,83 @@
+.how-people {
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    position: relative;
+    background: linear-gradient(358.26deg, #242A3A -2.15%, #2A3348 98%);
+    overflow: hidden;
+}
+
+.how-people__content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.how-people__top {
+    z-index: 10;
+}
+
+.how-people__info {
+    display: flex;
+    margin-top: 60px;
+}
+
+.how-people__text {
+    width: 40%;
+    line-height: 50px;
+    margin-right: 100px;
+}
+
+.how-people__rovers {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.how-people__rover-item {
+    list-style-type: none;
+    width: fit-content;
+    max-width: 20%;
+    margin-left: 10px;
+}
+
+.how-people__rover-icon {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.how-people__rover-text {
+    margin-top: 44px;
+    font-size: 0.5rem;
+    text-align: center;
+}
+
+.how-people__bottom {
+    background: url('../img/section-3-bg.svg') bottom/100% no-repeat;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    aspect-ratio: 1932.5 / 596.67;
+}
+
+.how-people__rover {
+    max-width: 24.51%;
+    max-height: 70.22%;
+    position: absolute;
+    left: 45%;
+    bottom: 50.87%;
+    transform: translate(-50%, 50%);
+    animation: how-people-rover-motion 10s linear infinite both;
+}
+
+.how-people__alien {
+    max-width: 21.64%;
+    max-height: 84.14%;
+    position: absolute;
+    left: 9.68%;
+    bottom: 53.47%;
+    transform: translate(-50%, 50%);
+    animation: how-people-alien-motion 10s linear infinite 2s both;
+}

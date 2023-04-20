@@ -1,0 +1,91 @@
+.additions {
+    width: 100vw;
+    height: 100vh;
+    background: #FFB762;
+    overflow: hidden;
+}
+
+.additions__content {
+    width: 100%;
+    height: 100%;
+}
+
+.addition__top {
+    width: 100%;
+    height: 20%;
+    text-align: center;
+}
+
+.addition__bottom {
+    width: 100%;
+    height: 80%;
+}
+
+.additions__picture {
+    max-width: 21.4%;
+    max-height: 47.65%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    aspect-ratio: 410.88 / 401.42;
+}
+
+.additions__mars {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.additions__orbit {
+    border: 5px solid white;
+    border-radius: 50%;
+    width: 160%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    aspect-ratio: 1;
+    animation: orbit-rotation 12s linear infinite both;
+}
+
+.phobos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% / 160 * 100 * 95 / 410.88);
+    position: absolute;
+    left: -5%;
+    bottom: 20%;
+    animation: phobos-rotation 12s linear infinite both;
+}
+
+.phobos__img {
+    width: 100%;
+    aspect-ratio: 95 / 97;
+}
+
+.deimos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% / 160 * 100 * 60 / 410.88);
+    position: absolute;
+    top: 92%;
+    left: 25%;
+    transform: translate(-50%, -14.15%);
+    animation: deimos-rotation 12s linear infinite both;
+}
+
+.deimos__img {
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+.planet-text {
+    text-align: center;
+    line-height: 50px;
+    letter-spacing: 0.52em;
+}

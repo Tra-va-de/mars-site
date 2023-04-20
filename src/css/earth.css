@@ -1,0 +1,69 @@
+.earth {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    background: #293246;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.earth__content {
+    width: 100%;
+    height: 100%;
+}
+
+.earth__header {
+    background: url('../img/section-5-bg-top.svg') center/cover no-repeat;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    aspect-ratio: 1921.5 / 330.76;
+}
+
+.earth__info {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+}
+
+.earth__text {
+    width: 60%;
+    line-height: 99px;
+    font-weight: 500;
+}
+
+.earth__rocket-img {
+    width: 8%;
+    margin-left: 5%;
+}
+
+.earth__footer {
+    background: url('../img/section-5-bg-bottom-earth.svg') center/cover no-repeat;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    aspect-ratio: 1914 / 301.4;
+}
+
+.earth__btn {
+    max-width: 48.28%;
+    padding: 30px 50px;
+    margin: 0 auto;
+    line-height: 50px;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    white-space: nowrap;
+    background: #394C76;
+    color: unset;
+    text-decoration: none;
+}
