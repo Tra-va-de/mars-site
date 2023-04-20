@@ -110,7 +110,7 @@
     }
 
     50% {
-        transform: translate(-50%, -50%) rotate(-180deg);
+        transform: translate(-50%, -75%) rotate(-180deg);
     }
 
     75% {
