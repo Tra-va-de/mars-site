@@ -21,7 +21,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    aspect-ratio: 1921.5 / 330.76;
+    aspect-ratio: 1920 / 330;
 }
 
 .earth__info {
@@ -29,7 +29,7 @@
     align-items: center;
     height: 100%;
     width: 100%;
-    position: absolute;
+    position: relative;
     z-index: 10;
 }
 
@@ -37,6 +37,7 @@
     width: 60%;
     line-height: 99px;
     font-weight: 500;
+    text-shadow: 0 0 2px #293246;
 }
 
 .earth__rocket-img {
@@ -50,7 +51,7 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    aspect-ratio: 1914 / 301.4;
+    aspect-ratio: 1920 / 300;
 }
 
 .earth__btn {
