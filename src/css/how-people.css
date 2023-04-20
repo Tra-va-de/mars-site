@@ -1,9 +1,10 @@
 .how-people {
     width: 100vw;
     height: 100vh;
-    color: white;
     position: relative;
     background: linear-gradient(358.26deg, #242A3A -2.15%, #2A3348 98%);
+    color: white;
+    text-shadow: 0 0 2px #242A3A;
     overflow: hidden;
 }
 
@@ -14,43 +15,50 @@
     width: 100%;
 }
 
+.how-people__title {
+    padding-bottom: 60px;
+    z-index: 10;
+}
+
 .how-people__top {
+    height: 100%;
     z-index: 10;
 }
 
 .how-people__info {
     display: flex;
-    margin-top: 60px;
 }
 
 .how-people__text {
     width: 40%;
     line-height: 50px;
-    margin-right: 100px;
 }
 
 .how-people__rovers {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
     width: 60%;
 }
 
 .how-people__rover-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     list-style-type: none;
     width: fit-content;
-    max-width: 20%;
-    margin-left: 10px;
 }
 
 .how-people__rover-icon {
     width: 100%;
-    margin: 0 auto;
+    max-width: 5.26vw;
+    min-width: 50px;
 }
 
 .how-people__rover-text {
     margin-top: 44px;
     font-size: 0.5rem;
-    text-align: center;
 }
 
 .how-people__bottom {
@@ -80,4 +88,42 @@
     bottom: 53.47%;
     transform: translate(-50%, 50%);
     animation: how-people-alien-motion 10s linear infinite 2s both;
+}
+
+@media screen and (max-width: 1200px) {
+    .how-people__info {
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+    }
+    
+    .how-people__text {
+        width: 100%;
+    }
+    
+    .how-people__rovers {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .how-people__rovers {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 20%;
+    }
+}
+
+@media screen and (max-height: 750px) {
+    .how-people__title {
+        padding-bottom: 30px;
+    }
+    
+    .how-people__text {
+        line-height: 30px;
+    }
+
+    .how-people__rover-text {
+        margin-top: 20px;
+        font-size: 0.4rem;
+    }
 }
