@@ -82,3 +82,9 @@
         font-size: calc(0.43rem + 17 * ((100vw - 767px) / (1920 - 767)));
     }
 }
+
+@media screen and (max-width: 870px) {
+    .side-nav__item-link {
+        font-size: 0.5rem;
+    }
+}
