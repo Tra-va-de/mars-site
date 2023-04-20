@@ -2,6 +2,7 @@
     display: flex;
     max-height: 90vh;
     min-height: 330px;
+    max-width: 430px;
     width: 22.4%;
     padding: 5.45% 0;
     position: fixed;
@@ -72,6 +73,11 @@
 .side-nav__item-link {
     text-decoration: none;
     color: unset;
-    font-size: calc(0.43rem + 17 * ((100vw - 767px) / (1920 - 767)));
-    line-height: calc(0.43rem + 17 * ((100vw - 767px) / (1920 - 767)));
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 1920px) {
+    .side-nav__item-link {
+        font-size: calc(0.43rem + 17 * ((100vw - 767px) / (1920 - 767)));
+    }
 }
