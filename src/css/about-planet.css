@@ -1,4 +1,6 @@
 .about-planet {
+    width: 100vw;
+    height: 100vh;
     background: linear-gradient(0deg, #2B344B 0%, #212633 100%);
     color: white;
     overflow: hidden;
