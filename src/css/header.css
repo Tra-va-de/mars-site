@@ -19,7 +19,6 @@
 .header__btn {
     display: inline-block;
     width: fit-content;
-    /* padding: 30px 105px; */
     padding: calc(0.6rem + 12 * ((100vw - 320px) / (1920 - 320))) calc((0.6rem + 12 * ((100vw - 320px) / (1920 - 320))) * 3.5);
     text-decoration: none;
     background-color: #39435E;
