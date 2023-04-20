@@ -112,9 +112,8 @@ p {
 
 .container {
     padding: 80px 10% 80px 70px;
+    height: 100%;
     width: 100%;
-    height: 100vh;
-    width: 100vw;
 }
 
 .header {
@@ -490,16 +489,13 @@ p {
 }
 
 .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: #FFB876;
     height: 30vh;
     width: 100vw;
     overflow: hidden;
-}
-
-.footer__content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 @keyframes header-rocket-fly {
