@@ -58,7 +58,6 @@ p {
 
 .side-nav__left {
     width: 32.093%;
-    /* min-width: 138px; */
     height: 100%;
     padding: 0 30px;
     position: relative;
@@ -111,10 +110,16 @@ p {
     color: unset;
 }
 
-.header {
-    height: 100vh;
+.container {
+    padding: 80px 10% 80px 70px;
     width: 100%;
-    padding: 7.41% 7.19%;
+    height: 100vh;
+    width: 100vw;
+}
+
+.header {
+    height: 100%;
+    width: 100%;
     position: relative;
     color: white;
     overflow: hidden;
@@ -125,7 +130,6 @@ p {
     flex-direction: column;
     justify-content: space-between;
     height: calc(100% - 160px);
-    /* margin: 80px 70px; */
     position: absolute;
     z-index: 10;
 }
@@ -169,12 +173,15 @@ p {
 }
 
 .about-planet {
-    display: flex;
-    height: 100vh;
-    width: 100vw;
     background: linear-gradient(0deg, #2B344B 0%, #212633 100%);
     color: white;
     overflow: hidden;
+}
+
+.about-planet__content {
+    display: flex;
+    height: 100%;
+    width: 100%;
 }
 
 .about-planet__left {
@@ -230,7 +237,6 @@ p {
     justify-content: center;
     width: 50%;
     height: 100%;
-    padding-right: 138px;
 }
 
 .about-planet__title {
@@ -238,26 +244,28 @@ p {
 }
 
 .how-people {
-    display: flex;
-    flex-direction: column;
+    width: 100vw;
     height: 100vh;
-    width: 100%;
-    padding: 80px 70px;
     color: white;
     position: relative;
     background: linear-gradient(358.26deg, #242A3A -2.15%, #2A3348 98%);
     overflow: hidden;
 }
 
+.how-people__content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
 .how-people__top {
-    margin-bottom: 60px;
     z-index: 10;
 }
 
-.how-people__content {
+.how-people__info {
     display: flex;
     margin-top: 60px;
-    padding-right: 138px;
 }
 
 .how-people__text {
@@ -320,19 +328,20 @@ p {
 }
 
 .additions {
+    width: 100vw;
     height: 100vh;
-    width: 100%;
-    padding: 80px 0;
     background: #FFB762;
     overflow: hidden;
+}
+
+.additions__content {
+    width: 100%;
+    height: 100%;
 }
 
 .addition__top {
     width: 100%;
     height: 20%;
-}
-
-.addition__title {
     text-align: center;
 }
 
@@ -414,13 +423,17 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 100vw;
     height: 100vh;
-    width: 100%;
-    padding: 80px 100px;
     background: #293246;
     color: white;
     position: relative;
     overflow: hidden;
+}
+
+.earth__content {
+    width: 100%;
+    height: 100%;
 }
 
 .earth__header {
@@ -432,7 +445,7 @@ p {
     aspect-ratio: 1921.5 / 330.76;
 }
 
-.earth__content {
+.earth__info {
     display: flex;
     align-items: center;
     height: 100%;
@@ -462,16 +475,18 @@ p {
 }
 
 .earth__btn {
+    max-width: 48.28%;
     padding: 30px 50px;
+    margin: 0 auto;
     line-height: 50px;
-    text-decoration: none;
-    color: unset;
-    background: #394C76;
     position: absolute;
     bottom: 50%;
     left: 50%;
     transform: translate(-50%, 50%);
     white-space: nowrap;
+    background: #394C76;
+    color: unset;
+    text-decoration: none;
 }
 
 .footer {
@@ -691,6 +706,10 @@ p {
         line-height: 0.5rem;
     }
 
+    .side-nav {
+        min-width: 300px;
+    }
+
     .how-people__content {
         flex-direction: column;
     }
@@ -721,7 +740,7 @@ p {
 
 @media screen and (max-width: 768px) {
     .how-people__rover-text {
-       word-wrap: break-word;
+        word-wrap: break-word;
     }
 }
 
