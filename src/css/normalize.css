@@ -41,7 +41,19 @@ p, a {
 }
 
 .container {
-    padding: 80px 15% 80px 70px;
+    padding: 80px 10% 80px 70px;
     height: 100%;
     width: 100%;
+}
+
+@media screen and (min-width: 1920px) {
+    .container {
+        padding: 80px 160px 80px 70px;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .container {
+        padding: 80px 80px 80px 70px;
+    }
 }
