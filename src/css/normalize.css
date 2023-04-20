@@ -41,14 +41,14 @@ p, a {
 }
 
 .container {
-    padding: 80px 10% 80px 70px;
+    padding: 80px 11% 80px 70px;
     height: 100%;
     width: 100%;
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1921px) {
     .container {
-        padding: 80px 160px 80px 70px;
+        padding: 80px 180px 80px 70px;
     }
 }
 
