@@ -22,8 +22,8 @@
 }
 
 .additions__picture {
-    max-width: 21.4%;
     max-height: 47.65%;
+    max-width: 40%;
     position: relative;
     top: 50%;
     left: 50%;
@@ -51,41 +51,92 @@
     animation: orbit-rotation 12s linear infinite both;
 }
 
-.phobos {
+.phobos-img {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: calc(100% / 160 * 100 * 95 / 410.88);
+    justify-content: center;
+    align-items: end;
+    width: 15.3971%;
     position: absolute;
-    left: -5%;
+    left: -1.5%;
     bottom: 20%;
+    aspect-ratio: 95 / 97;
+    background: url('../img/section-4-phobos.svg') center/contain no-repeat;
     animation: phobos-rotation 12s linear infinite both;
 }
 
-.phobos__img {
-    width: 100%;
-    aspect-ratio: 95 / 97;
+.phobos-img::after {
+    content: "Фобос";
+    position: relative;
+    top: 50%;
+    font-size: calc(0.6rem + 12 * ((100vw - 320px) / (1920 - 320)));
 }
 
-.deimos {
+.deimos-img {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: calc(100% / 160 * 100 * 60 / 410.88);
+    justify-content: center;
+    align-items: end;
+    width: 9.7245%;
     position: absolute;
-    top: 92%;
     left: 25%;
-    transform: translate(-50%, -14.15%);
+    bottom: -1%;
+    aspect-ratio: 1;
+    background: url("../img/section-4-deimos.svg") center/contain no-repeat;
     animation: deimos-rotation 12s linear infinite both;
 }
 
-.deimos__img {
-    width: 100%;
-    aspect-ratio: 1;
+.deimos-img::after {
+    content: "Деймос";
+    position: relative;
+    top: 90%;
+    font-size: calc(0.6rem + 12 * ((100vw - 320px) / (1920 - 320)));
 }
 
-.planet-text {
-    text-align: center;
-    line-height: 50px;
-    letter-spacing: 0.52em;
+@media screen and (max-width: 1700px) {
+    .planet-text {
+        font-size: 0.75rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .additions__orbit {
+        border: 2px solid white;
+    }
+
+    .phobos-img::after {
+        top: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .deimos-img {
+        bottom: -3%;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .additions__orbit {
+        border: 1px solid white;
+    }
+
+    .deimos-img {
+        bottom: -5%;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .deimos-img {
+        bottom: -6%;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .deimos-img {
+        bottom: -8%;
+    }
+}
+
+@media screen and (max-width: 310px) {
+    .deimos-img {
+        bottom: -12%;
+    }
 }
