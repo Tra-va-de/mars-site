@@ -43,6 +43,9 @@
 .earth__rocket-img {
     width: 8%;
     margin-left: 5%;
+    position: absolute;
+    right: 20%;
+    animation: earth-rocket-motion 12s linear infinite both;
 }
 
 .earth__footer {

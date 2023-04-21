@@ -112,3 +112,35 @@
     }
 }
 
+@keyframes earth-rocket-motion {
+    0% {
+        bottom: 5%;
+    }
+
+    20% {
+        transform: rotate(0);
+    }
+
+    30% {
+        transform: rotate(180deg);
+    }
+
+    40%,
+    50% {
+        bottom: 85%;
+        transform: rotate(180deg);
+    }
+
+    70% {
+        transform: rotate(180deg);
+    }
+
+    80% {
+        transform: rotate(0);
+    }
+
+    90%,
+    100% {
+        bottom: 5%;
+    }
+}
