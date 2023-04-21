@@ -114,72 +114,64 @@
 
 @keyframes earth-rocket-motion-horizontal {
     0% {
-        top: auto;
-        bottom: 30px;
+        transform: translateY(0) rotate(0);
     }
-
+    
     35% {
-        transform: rotate(0);
+        transform: translateY(calc(-100vh * .85 + 100%)) rotate(0);
     }
-
+    
     40% {
-        transform: rotate(180deg);
+        transform: translateY(calc(-100vh * .90 + 100%)) rotate(180deg);
     }
-
+    
     45%,
     50% {
-        bottom: auto;
-        top: 30px;
-        transform: rotate(180deg);
+        transform: translateY(calc(-100vh + 100% + 40px)) rotate(180deg);
     }
-
+    
     85% {
-        transform: rotate(180deg);
+        transform: translateY(calc(-100vh * .35 + 100%)) rotate(180deg) ;
     }
-
+    
     90% {
-        transform: rotate(0);
+        transform: translateY(calc(-100vh * .30 + 100%)) rotate(0);
     }
-
+    
     95%,
     100% {
-        top: auto;
-        bottom: 30px;
+        transform: rotate(0) translateY(0);
     }
 }
 
 @keyframes earth-rocket-motion-vertical {
     0% {
-        top: auto;
-        bottom: 25px;
+        transform: translateY(0) rotate(0);
     }
     
     35% {
-        transform: rotate(0);
+        transform: translateY(calc(-100vh * .85 + 100%)) rotate(0);
     }
     
     40% {
-        transform: rotate(180deg);
+        transform: translateY(calc(-100vh * .90 + 100%)) rotate(180deg);
     }
     
     45%,
     50% {
-        bottom: auto;
-        top: 25px;
-        transform: rotate(180deg);
+        transform: translateY(calc(-100vh + 100% + 40px)) rotate(180deg);
     }
     
     85% {
-        transform: rotate(180deg);
+        transform: translateY(calc(-100vh * .15 + 100%)) rotate(180deg) ;
     }
     
     90% {
-        transform: rotate(0);
+        transform: translateY(calc(-100vh * .10 + 100%)) rotate(0);
     }
     
     95%,
     100% {
-        top: auto;
-        bottom: 25px;
+        transform: rotate(0) translateY(0);
     }
 }

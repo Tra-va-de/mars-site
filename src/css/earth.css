@@ -35,7 +35,7 @@
 .earth__text {
     line-height: 99px;
     font-weight: 500;
-    text-shadow: 0 0 2px #293246;
+    text-shadow: 0 0 3px #293246;
     z-index: 10;
 }
 
@@ -44,7 +44,8 @@
     margin-left: 5%;
     position: absolute;
     right: 20%;
-    animation: earth-rocket-motion-horizontal 12s ease-in-out infinite both;
+    bottom: 20px;
+    animation: earth-rocket-motion-horizontal 4s ease-in-out infinite both;
     z-index: 9;
 }
 
@@ -74,7 +75,7 @@
 
 @media (orientation: portrait) {
     .earth__rocket-img {
-        animation: earth-rocket-motion-vertical 18s ease-in-out infinite alternate both;
+        animation: earth-rocket-motion-vertical 18s ease-in-out infinite both;
     }
 }
 
