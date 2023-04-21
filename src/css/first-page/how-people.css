@@ -62,7 +62,7 @@
 }
 
 .how-people__bottom {
-    background: url('../img/section-3-bg.svg') bottom/100% no-repeat;
+    background: url('../../img/section-3-bg.svg') bottom/100% no-repeat;
     width: 100%;
     position: absolute;
     left: 0;

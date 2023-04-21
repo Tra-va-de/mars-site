@@ -16,7 +16,7 @@
 }
 
 .earth__header {
-    background: url('../img/section-5-bg-top.svg') center/cover no-repeat;
+    background: url('../../img/section-5-bg-top.svg') center/cover no-repeat;
     width: 100%;
     position: absolute;
     top: 0;
@@ -65,7 +65,7 @@
 }
 
 .earth__footer {
-    background: url('../img/section-5-bg-bottom-earth.svg') center/cover no-repeat;
+    background: url('../../img/section-5-bg-bottom-earth.svg') center/cover no-repeat;
     width: 100%;
     position: absolute;
     left: 0;

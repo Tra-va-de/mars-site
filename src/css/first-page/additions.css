@@ -60,7 +60,7 @@
     left: -1.5%;
     bottom: 20%;
     aspect-ratio: 95 / 97;
-    background: url('../img/section-4-phobos.svg') center/contain no-repeat;
+    background: url('../../img/section-4-phobos.svg') center/contain no-repeat;
     animation: phobos-rotation 12s linear infinite both;
 }
 
@@ -80,7 +80,7 @@
     left: 25%;
     bottom: -1%;
     aspect-ratio: 1;
-    background: url("../img/section-4-deimos.svg") center/contain no-repeat;
+    background: url("../../img/section-4-deimos.svg") center/contain no-repeat;
     animation: deimos-rotation 12s linear infinite both;
 }
 

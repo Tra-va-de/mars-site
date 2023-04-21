@@ -28,7 +28,7 @@
 }
 
 .about-planet__planets {
-    background: url('../img/section-2-planets.svg') center / contain no-repeat;
+    background: url('../../img/section-2-planets.svg') center / contain no-repeat;
     width: 100%;
     position: absolute;
     top: 0;
@@ -37,7 +37,7 @@
 }
 
 .alien {
-    background: url('../img/section-2-alien.svg') center/contain no-repeat;
+    background: url('../../img/section-2-alien.svg') center/contain no-repeat;
     width: 23.99%;
     max-height: 22.11%;
     position: absolute;
