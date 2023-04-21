@@ -22,22 +22,22 @@ body {
 h1 {
     /* font-size: 6rem; */
     /* line-height: 6rem; */
-    font-size: calc((100vw - 320px) / (1920 - 320) * 90 + 3rem);
-    line-height: calc((100vw - 320px) / (1920 - 320) * 90 + 3rem);
+    font-size: calc((100vw - 280px) / (1920 - 280) * 90 + 3rem);
+    line-height: calc((100vw - 280px) / (1920 - 280) * 90 + 3rem);
 }
 
 h2 {
     /* font-size: 2rem;
     line-height: 99px; */
-    font-size: calc(1rem + 30 * ((100vw - 320px) / (1920 - 320)));
-    line-height: calc(1rem + 30 * ((100vw - 320px) / (1920 - 320)));
+    font-size: calc(0.8rem + 36 * ((100vw - 280px) / (1920 - 280)));
+    line-height: calc(0.8rem + 36 * ((100vw - 280px) / (1920 - 280)));
 }
 
 p, a {
     /* font-size: 1rem;
     line-height: 50px; */
-    font-size: calc(0.6rem + 12 * ((100vw - 320px) / (1920 - 320)));
-    line-height: calc(0.6rem + 12 * ((100vw - 320px) / (1920 - 320)));
+    font-size: calc(0.6rem + 12 * ((100vw - 280px) / (1920 - 280)));
+    line-height: calc(0.6rem + 12 * ((100vw - 280px) / (1920 - 280)));
 }
 
 .container {
