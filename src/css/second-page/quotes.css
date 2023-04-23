@@ -1,4 +1,8 @@
 .quotes {
     height: 100vh;
     width: 100vw;
+    background: url('../../img/quotes_2.svg') left 130% / contain no-repeat,
+        url('../../img/quotes_1.svg') left bottom / contain no-repeat,
+        url('../../img/quotes_3.svg') right bottom / contain no-repeat,
+        linear-gradient(180deg, #293145 0%, #222837 100%);
 }
