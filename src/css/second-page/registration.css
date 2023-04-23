@@ -1,4 +1,76 @@
 .registration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     width: 100vw;
+    padding: 0;
+    background: #FFB762;
+    text-align: center;
+    overflow: hidden;
+}
+
+.registration__form {
+    background: #353F5A;
+    width: auto;
+    max-width: 70%;
+    height: 70%;
+    max-height: auto;
+    aspect-ratio: 1315 / 1212;
+}
+
+.registration__form-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #202535;
+    aspect-ratio: 1315 / 183;
+}
+
+.registration__form-body {
+    display: flex;
+    flex-direction: column;
+    padding: 9% 12%;
+}
+
+.registration__form-field {
+    margin-bottom: 7%;
+    padding: 0 1%;
+    font-size: 1rem;
+    background: #303854;
+    color: unset;
+}
+
+.registration__form-field:focus {
+    border: 2px solid #FD9B40;
+}
+
+.registration__form-checkbox {
+    width: 6%;
+    aspect-ratio: 1;
+    margin: 0 auto 7%;
+    border: none;
+}
+
+.registration__form-text {
+    margin-bottom: 20%;
+}
+
+.registration__form-btn {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0 13%;
+    aspect-ratio: 526 / 115;
+    font-size: 1rem;
+    background: #4B5A82;
+    color: unset;
+}
+
+@media (orientation: portrait)  {
+    .registration__form {
+        width: 70%;
+        max-width: auto;
+        height: auto;
+        max-height: 70%;
+    }
 }
