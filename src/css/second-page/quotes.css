@@ -1,8 +1,41 @@
 .quotes {
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
+    padding: 3% 0;
     background: url('../../img/quotes_2.svg') left 130% / contain no-repeat,
         url('../../img/quotes_1.svg') left bottom / contain no-repeat,
         url('../../img/quotes_3.svg') right bottom / contain no-repeat,
         linear-gradient(180deg, #293145 0%, #222837 100%);
+    text-align: center;
+    overflow: hidden;
+}
+
+.quotes__link {
+    display: inline-block;
+    font-size: 2rem;
+    margin-top: 5%;
+    color: unset;
+    text-decoration: none;
+}
+
+.quotes__frame {
+    margin-top: 17%;
+    padding: 8% 10%;
+    background: #353F5A;
+    list-style-type: none;
+    text-align: left;
+}
+
+.quotes__frame-item:not(:last-of-type) {
+    margin-bottom: 12%;
+}
+
+.quote {
+    line-height: 2rem;
+}
+
+.quote-author {
+    text-align: right;
+    color: #FD9B40;
+    margin-top: 4%;
 }
