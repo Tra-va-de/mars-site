@@ -31,9 +31,13 @@ h2 {
 }
 
 p,
-a {
-    font-size: 1rem;
-    line-height: 1rem;
+a,
+details,
+summary {
+    /* font-size: 1rem;
+    line-height: 1rem; */
+    font-size: calc(14px + 16 * ((100vw - 280px) / (1920 - 280)));
+    line-height: calc(14px + 16 * ((100vw - 280px) / (1920 - 280)));
 }
 
 .container {

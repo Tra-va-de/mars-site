@@ -57,12 +57,12 @@
 }
 
 .professions__details {
-    font-size: 0.6rem;
+    /* font-size: 0.6rem; */
 }
 
 .professions__details summary {
     color: #FD9B40;
-    font-size: 1rem;
+    /* font-size: 1rem; */
 }
 
 .professions__details[open] {
@@ -83,6 +83,10 @@
         position: relative;
         margin-left: 10%;
     }
+    
+        .professions__cards:hover {
+            animation: none;
+        }
 
     .professions__card {
         flex: 0 0 90%;
