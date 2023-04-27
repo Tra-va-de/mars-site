@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+    const container = document.querySelector('.professions__cards');
     const elements = document.querySelectorAll('.professions__card');
 
     elements.forEach(element => {
@@ -34,13 +35,12 @@ document.addEventListener('DOMContentLoaded', function () {
                     const offset = keyframes[i].offset * duration;
                     // получаем разницу между текущим временем анимации и временем кадра
                     const distance = Math.abs(currentTime - offset);
-                    // const distance = currentTime - offset;
                     // проверяем, что разница во времени с данным кадром меньше предыдущего сохраненного значения,
                     // а также больше нуля
                     console.log("до кадра", keyframes[i].offset, "distance = ", distance);
                     if (distance < closestDistance && offset > currentTime) {
                         // сохраняем время ожидания до ближайшего кадра
-                        closestDistance = currentTime - offset;
+                        closestDistance = offset - currentTime;
                         // и время до ближайшего кадра со старта
                         closestOffset = offset;
                     }
@@ -53,17 +53,23 @@ document.addEventListener('DOMContentLoaded', function () {
                     console.log(closestOffset, currentTime, closestOffset - currentTime);
                     setTimeout(() => {
                         animation.pause();
-                    }, (closestOffset - currentTime) / animation.playbackRate);
+                        // увеличиваем немного выделенный элемент
+                        container.style.paddingLeft = "5%";
+                        element.style.flexBasis = "100%";
+                    }, closestOffset - currentTime);
                 });
-
+                
                 console.log("*** Готово ***");
             }
         });
-
+        
         element.addEventListener('mouseout', () => {
             elements.forEach(element => {
                 const animation = element.getAnimations()[0];
                 animation.play();
+                // уменьшаем обратно выделенный элемент
+                container.style.paddingLeft = "10%";
+                element.style.flexBasis = "90%";
                 console.log("Добби свободен");
             });
         });

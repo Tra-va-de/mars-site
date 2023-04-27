@@ -76,13 +76,15 @@
 
     .professions__cards {
         position: relative;
-        margin-left: 10%;
+        padding-left: 10%;
+        transition: .3s;
     }
 
     .professions__card {
         flex: 0 0 90%;
         margin-right: 300px;
         animation: profession-slider 8s ease-in-out infinite forwards;
+        transition: .3s;
     }
 
     .professions__card--additional {
