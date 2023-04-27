@@ -56,13 +56,8 @@
     width: 56.6117%;
 }
 
-.professions__details {
-    /* font-size: 0.6rem; */
-}
-
 .professions__details summary {
     color: #FD9B40;
-    /* font-size: 1rem; */
 }
 
 .professions__details[open] {
@@ -74,7 +69,7 @@
     background: #39435C;
 }
 
-@media (orientation: portrait)  {
+@media (orientation: portrait) {
     .professions__title {
         margin-bottom: 5vh;
     }
@@ -83,10 +78,6 @@
         position: relative;
         margin-left: 10%;
     }
-    
-        .professions__cards:hover {
-            animation: none;
-        }
 
     .professions__card {
         flex: 0 0 90%;
