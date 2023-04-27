@@ -4,4 +4,8 @@ elements.forEach(element => {
   element.addEventListener('mouseover', () => {
     element.style.animationPlayState = 'paused';
   });
+
+  element.addEventListener('mouseout', () => {
+    element.style.animationPlayState = 'running';
+  });
 });
