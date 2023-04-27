@@ -1,11 +1,17 @@
-let elements = document.querySelectorAll('.professions__card');
+document.addEventListener('DOMContentLoaded', function () {
+    let elements = document.querySelectorAll('.professions__card');
 
-elements.forEach(element => {
-  element.addEventListener('mouseover', () => {
-    element.style.animationPlayState = 'paused';
-  });
+    elements.forEach(element => {
+        element.addEventListener('mouseover', () => {
+            elements.forEach(element => {
+                element.style.animationPlayState = 'paused';
+            });
+        });
 
-  element.addEventListener('mouseout', () => {
-    element.style.animationPlayState = 'running';
-  });
+        element.addEventListener('mouseout', () => {
+            elements.forEach(element => {
+                element.style.animationPlayState = 'running';
+            });
+        });
+    });
 });
