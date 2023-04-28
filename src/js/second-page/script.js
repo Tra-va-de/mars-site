@@ -2,15 +2,33 @@ document.addEventListener('DOMContentLoaded', function () {
     const container = document.querySelector('.professions__cards');
     const elements = document.querySelectorAll('.professions__card');
 
+    const windowWidth = window.innerWidth;
+    const screenCenter = windowWidth / 2;
+
     elements.forEach(element => {
         element.addEventListener('mouseover', () => {
             console.log("*** Стартуем ***");
             console.log("Имя элемента: ", element.querySelector('.professions__name').innerHTML);
+
             // получаем анимацию элемента
             const animation = element.getAnimations()[0];
             // console.log(animation);
+
             // берем все кадры анимации
             const keyframes = animation.effect.getKeyframes();
+            
+            // получаем координа координату центра элемента по оси x
+            const rect = element.getBoundingClientRect();
+            const elementCenter = (rect.left + rect.right) / 2 + window.scrollX;
+
+            console.log('elementCenter:', elementCenter, 'screenCenter: ', screenCenter);
+
+            if (elementCenter < screenCenter) {
+                elements.forEach(element => {
+                    const animation = element.getAnimations()[0];
+                    animation.playbackRate = -1;
+                });
+            }
 
             console.log("Время старта: ", animation.startTime);
             // проверяем, что анимация запущена
@@ -38,7 +56,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     // проверяем, что разница во времени с данным кадром меньше предыдущего сохраненного значения,
                     // а также больше нуля
                     console.log("до кадра", keyframes[i].offset, "distance = ", distance);
-                    if (distance < closestDistance && offset > currentTime) {
+                    if (distance < closestDistance && offset >= currentTime) {
+                    // if (offset > currentTime) {
                         // сохраняем время ожидания до ближайшего кадра
                         closestDistance = offset - currentTime;
                         // и время до ближайшего кадра со старта
@@ -46,26 +65,28 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 }
                 console.log("Разница с настоящим (текущим) временем: ", closestDistance);
-                
+
                 elements.forEach(element => {
                     const animation = element.getAnimations()[0];
                     // Дожидаемся ближайшего кадра
                     console.log(closestOffset, currentTime, closestOffset - currentTime);
                     setTimeout(() => {
+                        animation.playbackRate = 1;
                         animation.pause();
                         // увеличиваем немного выделенный элемент
                         container.style.paddingLeft = "5%";
                         element.style.flexBasis = "100%";
                     }, closestOffset - currentTime);
                 });
-                
+
                 console.log("*** Готово ***");
             }
         });
-        
+
         element.addEventListener('mouseout', () => {
             elements.forEach(element => {
                 const animation = element.getAnimations()[0];
+                animation.playbackRate = 1;
                 animation.play();
                 // уменьшаем обратно выделенный элемент
                 container.style.paddingLeft = "10%";
