@@ -1,0 +1,13 @@
+%section-size {
+    height: 100dvh;
+    width: 100%;
+    overflow: hidden;
+}
+
+%hover-scale {
+    transition: scale 300ms;
+
+    &:hover {
+        scale: 1.1;
+    }
+}

@@ -109,6 +109,14 @@ legend {
   --sidenav-left-width: calc(140 / 430 * 100%);
 }
 
+.sidenav__item, .sidenav__logo {
+  -webkit-transition: scale 300ms;
+  transition: scale 300ms;
+}
+.sidenav__item:hover, .sidenav__logo:hover {
+  scale: 1.1;
+}
+
 html, body {
   font-family: var(--font-main);
   color: var(--text-color);
@@ -159,9 +167,6 @@ html, body {
   top: 50px;
   -webkit-transition: scale 0.3s;
   transition: scale 0.3s;
-}
-.sidenav__logo:hover {
-  scale: 1.1;
 }
 .sidenav__logo-img {
   width: 55.7142857143%;
