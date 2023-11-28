@@ -1,0 +1,24 @@
+:root {
+    --text-color: #FFFFFF;
+    --text-second-color: #000000;
+
+    --accent-first-color: #222735;
+    --accent-second-color: #2B344B;
+    --sand-color: #FFB762;
+
+    --sidenav-color: #3E4761;
+    --button-color: #39435E;
+
+    --font-main: 'Gputeks', sans-serif;
+    
+    --font-size-base: 30px;
+    --font-size-main: 1rem;
+    --font-size-small: 0.5rem;
+    --font-size-large: 2rem;
+    --font-size-big: 6rem;
+
+    --sidenav-width: clamp(200px, 30vw + 138px, 430px);
+    --sidenav-height: clamp(330px, 90vh, 920px);
+
+    --sidenav-left-width: calc(140 / 430 * 100%);
+}
