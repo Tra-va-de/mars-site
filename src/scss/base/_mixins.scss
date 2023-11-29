@@ -16,10 +16,15 @@
     }
 }
 
-// миксин адаптивного шрифта
-@mixin adaptive-font($pc-font-size, $mobile-font-size, $max-screen-width, $min-screen-width) {
+// Миксин для создания адаптивного шрифта
+// Параметры:
+// $pc-font-size - размер шрифта на больших экранах (в px или rem)
+// $mobile-font-size - размер шрифта на мобильных устройствах (в px или rem)
+@mixin adaptive-font($pc-font-size, $mobile-font-size) {
+    // Вычисление разницы между размерами шрифта на больших и мобильных экранах
     $add-size: $pc-font-size - $mobile-font-size;
     
+    // Проверка и преобразование разницы в px, если она задана в rem
     @if (unit($add-size) == px) {
         $add-size: strip-unit($add-size);
     }
@@ -27,6 +32,7 @@
     @if (unit($add-size) == rem) {
         $add-size: strip-unit($add-size) * $font-size-base;
     }
-  
+
+    // Применение стилей с использованием calc для вычисления адаптивного размера шрифта
     font-size: calc(#{$mobile-font-size} + #{strip-unit($add-size)} * ((100vw - #{$min-screen-width + px}) / (#{$max-screen-width} - #{$min-screen-width})));
 }
