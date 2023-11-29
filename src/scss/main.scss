@@ -1,8 +1,13 @@
 @import "../fonts/Gputeks/stylesheets.css";
 
+// Base
 @import "./base/reset";
 @import "./base/vars";
+@import "./base/functions";
 @import "./base/extends";
+@import "./base/mixins";
 @import "./base/base";
 
-@import "./base/sidenav";
+// Blocks
+@import "./blocks/sidenav";
+@import "./blocks/header";
