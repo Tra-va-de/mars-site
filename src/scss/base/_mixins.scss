@@ -1,0 +1,32 @@
+// Миксин, настраивающий положение секции,
+// контента и фона секции
+@mixin section-position {
+    position: relative;
+
+    &__content, &__background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__content {
+        z-index: 2;
+    }
+}
+
+// миксин адаптивного шрифта
+@mixin adaptive-font($pc-font-size, $mobile-font-size, $max-screen-width, $min-screen-width) {
+    $add-size: $pc-font-size - $mobile-font-size;
+    
+    @if (unit($add-size) == px) {
+        $add-size: strip-unit($add-size);
+    }
+
+    @if (unit($add-size) == rem) {
+        $add-size: strip-unit($add-size) * $font-size-base;
+    }
+  
+    font-size: calc(#{$mobile-font-size} + #{strip-unit($add-size)} * ((100vw - #{$min-screen-width + px}) / (#{$max-screen-width} - #{$min-screen-width})));
+}
