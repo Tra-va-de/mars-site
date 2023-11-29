@@ -1,13 +1,13 @@
 .sidenav {
     display: flex;
-    background-color: var(--sidenav-color);
-    width: var(--sidenav-width);
-    height: var(--sidenav-height);
+    background-color: $sidenav-color;
+    width: $sidenav-width;
+    height: $sidenav-height;
     overflow: hidden;
     position: fixed;
     right: 0;
     top: 50%;
-    transform: translateX(calc(100% - var(--sidenav-left-width))) translateY(-50%);
+    transform: translateX(calc(100% - $sidenav-left-width)) translateY(-50%);
     transition: transform 500ms ease-in-out;
     z-index: 1000;
     
@@ -20,7 +20,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: var(--sidenav-left-width);
+        width: $sidenav-left-width;
         height: 100%;
     }
     
@@ -40,7 +40,7 @@
     &__text {
         writing-mode: vertical-lr;
         text-orientation: upright;
-        font-size: var(--font-size-small);
+        font-size: $font-size-small;
     }
     
     &__right {
@@ -62,7 +62,7 @@
     }
     
     &__item-link {
-        font-size: var(--font-size-main);
+        font-size: $font-size-main;
     }
 }
 
