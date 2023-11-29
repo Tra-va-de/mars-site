@@ -20,11 +20,11 @@
     }
 }
 
-// Миксин для создания адаптивного шрифта
+// Миксин для создания адаптивного стиля
 // Параметры:
 // $pc-font-size - размер шрифта на больших экранах (в px или rem)
 // $mobile-font-size - размер шрифта на мобильных устройствах (в px или rem)
-@mixin adaptive-font($pc-font-size, $mobile-font-size) {
+@mixin adaptive-style($property, $pc-font-size, $mobile-font-size) {
     // Вычисление разницы между размерами шрифта на больших и мобильных экранах
     $add-size: $pc-font-size - $mobile-font-size;
     
@@ -38,5 +38,15 @@
     }
 
     // Применение стилей с использованием calc для вычисления адаптивного размера шрифта
-    font-size: calc(#{$mobile-font-size} + #{strip-unit($add-size)} * ((100vw - #{$min-screen-width + px}) / (#{$max-screen-width} - #{$min-screen-width})));
+    #{$property}: calc(#{$mobile-font-size} + #{strip-unit($add-size)} * ((100vw - #{$min-screen-width + px}) / (#{$max-screen-width} - #{$min-screen-width})));
+}
+
+// Миксин для адаптивного шрифта
+@mixin adaptive-font($pc-font-size, $mobile-font-size) {
+    @include adaptive-style('font-size', $pc-font-size, $mobile-font-size);
+}
+
+// Миксин для адаптивной высоты строки
+@mixin adaptive-line-height($pc-line-height, $mobile-line-height) {
+    @include adaptive-style('line-height', $pc-line-height, $mobile-line-height);
 }
