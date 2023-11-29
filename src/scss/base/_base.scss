@@ -1,5 +1,38 @@
 html, body {
-    font-family: var(--font-main);
-    color: var(--text-color);
-    font-size: var(--font-size-main);
+    font-family: $font-main;
+    color: $text-color;
+    font-size: $font-size-main;
+}
+
+h1 {
+    /* font-size: 6rem; */
+    /* line-height: 6rem; */
+    $pc-font-size: 6rem;
+    $mobile-font-size: 3rem;
+    @include adaptive-font($pc-font-size, $mobile-font-size);
+    @include adaptive-line-height($pc-font-size, $mobile-font-size);
+}
+
+h2 {
+    /* font-size: 2rem; */
+    /* line-height: 99px; */
+    $pc-font-size: 2rem;
+    $mobile-font-size: 0.8rem;
+    @include adaptive-font($pc-font-size, $mobile-font-size);
+    @include adaptive-line-height($pc-font-size, $mobile-font-size);
+}
+
+p, a {
+    /* font-size: 1rem; */
+    /* line-height: 50px; */
+    $pc-font-size: 1rem;
+    $mobile-font-size: 0.6rem;
+    @include adaptive-font($pc-font-size, $mobile-font-size);
+    @include adaptive-line-height($pc-font-size, $mobile-font-size);
+}
+
+.container {
+    padding: 80px 11% 80px 70px;
+    height: 100%;
+    width: 100%;
 }
