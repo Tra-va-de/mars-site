@@ -1,7 +1,7 @@
 .about-planet {
     @extend %section-size;
     @include section-position;
-
+    
     background: linear-gradient(0deg, #2B344B 0%, #212633 100%);
     color: white;
     
@@ -22,7 +22,7 @@
     
     &__planets {    
         height: 100%;
-
+        
         position: relative;
         z-index: 3;
     }
@@ -43,31 +43,15 @@
         }
         
         &__article {
+            @include background-frame;
+            
             gap: 20px;
-
+            
             height: fit-content;
             width: 100%;
-
-            padding: 10px;
-
+            
             position: absolute;
-            z-index: 3;
-
-            &::before {
-                content: '';
-
-                background-color: $accent-first-color;
-                opacity: 0.8;
-                border-radius: 15px;
-
-                position: absolute;
-                z-index: -1;
-
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-            }
+            z-index: 3;            
         }
     }
 }
