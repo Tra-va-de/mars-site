@@ -50,3 +50,29 @@
 @mixin adaptive-line-height($pc-line-height, $mobile-line-height) {
     @include adaptive-style('line-height', $pc-line-height, $mobile-line-height);
 }
+
+// Миксин `background-frame` для создания рамки с фоном вокруг элемента.
+// Использует псевдоэлемент ::before с настраиваемыми свойствами.
+@mixin background-frame {
+    padding: 10px;
+
+    @if (position != static) {
+        position: relative;
+    }
+
+    &::before {
+        content: '';
+
+        background-color: $accent-first-color;
+        opacity: 0.8;
+        border-radius: 15px;
+
+        position: absolute;
+        z-index: -1;
+
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}
