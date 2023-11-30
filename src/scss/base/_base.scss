@@ -5,36 +5,37 @@ html, body {
 }
 
 h1 {
-    /* font-size: 6rem; */
-    /* line-height: 6rem; */
-    $pc-font-size: 6rem;
-    $mobile-font-size: 3rem;
+    $pc-font-size: $font-size-big;
+    $mobile-font-size: $font-size-big-mobile;
+
     @include adaptive-font($pc-font-size, $mobile-font-size);
     @include adaptive-line-height($pc-font-size, $mobile-font-size);
 }
 
 h2 {
-    /* font-size: 2rem; */
-    /* line-height: 99px; */
-    $pc-font-size: 2rem;
-    $mobile-font-size: 0.8rem;
+    $pc-font-size: $font-size-large;
+    $mobile-font-size: $font-size-large-mobile;
+
     @include adaptive-font($pc-font-size, $mobile-font-size);
     @include adaptive-line-height($pc-font-size, $mobile-font-size);
 }
 
 p, a {
-    /* font-size: 1rem; */
-    /* line-height: 50px; */
-    $pc-font-size: 1rem;
-    $mobile-font-size: 0.6rem;
+    $pc-font-size: $font-size-main;
+    $mobile-font-size: $font-size-main-mobile;
+
     @include adaptive-font($pc-font-size, $mobile-font-size);
-    @include adaptive-line-height($pc-font-size, $mobile-font-size);
+    @include adaptive-line-height($pc-font-size * 1.5, $mobile-font-size);
 }
 
 .container {
     padding: 80px 11% 80px 70px;
     height: 100%;
     width: 100%;
+
+    @media screen and (max-width: 1300px) {
+        padding: 80px 15% 80px 70px;
+    }
 
     @media screen and (min-width: 1921px) {
         padding: 80px 180px 80px 70px;
