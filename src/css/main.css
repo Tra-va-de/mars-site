@@ -90,7 +90,7 @@ legend {
   display: block;
 }
 
-.about-planet, .header {
+.how-people, .about-planet, .header {
   height: 100dvh;
   width: 100%;
   overflow: hidden;
@@ -147,7 +147,7 @@ p, a {
 }
 @media screen and (max-width: 870px) {
   .container {
-    padding: 40px 80px 40px 35px;
+    padding: 20px 80px 40px 35px;
   }
 }
 
@@ -358,12 +358,13 @@ p, a {
     max-width: 100%;
   }
   .about-planet__article {
+    padding: 10px;
+    position: relative;
     gap: 20px;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     width: 100%;
-    padding: 10px;
     position: absolute;
     z-index: 3;
   }
@@ -399,4 +400,128 @@ p, a {
   z-index: 2;
   -webkit-animation: alien-eye-motion 1s linear infinite alternate both;
           animation: alien-eye-motion 1s linear infinite alternate both;
+}
+
+.how-people {
+  position: relative;
+  background: linear-gradient(358.26deg, #242A3A -2.15%, #2A3348 98%);
+  color: white;
+  text-shadow: 0 0 2px #242A3A;
+  overflow: hidden;
+}
+.how-people__content {
+  position: relative;
+  z-index: 2;
+}
+.how-people__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.how-people__content, .how-people__background {
+  width: 100%;
+  height: 100%;
+}
+.how-people__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 6.4814814815%;
+}
+.how-people__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.how-people__text {
+  width: 40%;
+  line-height: min(30px, 4.6296296296vh);
+}
+.how-people__rovers {
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  width: 60%;
+}
+.how-people__rover-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4.0740740741vh;
+}
+.how-people__rover-icon {
+  width: 100%;
+  max-width: 5.26vw;
+  min-width: 50px;
+}
+.how-people__rover-text {
+  font-size: 0.5rem;
+}
+.how-people__background {
+  background: url("../img/section-3-bg.svg") bottom/100% no-repeat;
+}
+.how-people__rover {
+  width: 24.6875%;
+  position: absolute;
+  left: 35.5208333333%;
+  bottom: 4.6296296296%;
+  -webkit-animation: how-people-rover-motion 10s linear infinite both;
+          animation: how-people-rover-motion 10s linear infinite both;
+}
+.how-people__alien {
+  width: 26.5104166667%;
+  position: absolute;
+  left: 0;
+  bottom: 4.6296296296%;
+  -webkit-animation: how-people-alien-motion 10s linear infinite 2s both;
+          animation: how-people-alien-motion 10s linear infinite 2s both;
+}
+@media screen and (max-width: 1200px) {
+  .how-people__info {
+    padding: 10px;
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 7.4074074074vh;
+  }
+  .how-people__info::before {
+    content: "";
+    background-color: #222735;
+    opacity: 0.8;
+    border-radius: 15px;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .how-people__text {
+    width: 100%;
+  }
+  .how-people__rovers {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 700px) and (orientation: portrait) {
+  .how-people__rovers {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1.8518518519vh;
+  }
 }
