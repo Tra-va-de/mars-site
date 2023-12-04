@@ -2,7 +2,7 @@
     @extend %section-size;
     @include section-position;
     
-    background: linear-gradient(0deg, #2B344B 0%, #212633 100%);
+    background: linear-gradient(0deg, $accent-second-color 0%, $accent-first-color 100%);
     color: white;
     
     &__content {
