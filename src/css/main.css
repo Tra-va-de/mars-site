@@ -105,7 +105,7 @@ legend {
   scale: 1.1;
 }
 
-.additions__orbit {
+.footer, .additions__orbit {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -712,4 +712,11 @@ p, a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.footer {
+  background: #FFB876;
+  height: min(160px, 30vh);
+  width: 100%;
+  overflow: hidden;
 }

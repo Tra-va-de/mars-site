@@ -1,0 +1,9 @@
+.footer {
+    @extend %flex-all-center;
+
+    background: #FFB876;
+
+    height: min(160px, 30vh);
+    width: 100%;
+    overflow: hidden;
+}
