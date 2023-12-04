@@ -1,0 +1,52 @@
+.earth {
+    @extend %section-size;
+    @include section-position;
+
+    background-color: $accent-second-color;
+    
+    &__content {
+        @extend %flex-align-center;
+    }
+
+    &__text {
+        line-height: normal;
+
+        width: 1000 / 1920 * 100dvw;
+        text-shadow: 0 0 3px #293246;
+    }
+    
+    &__rocket {
+        width: 130 / 1920 * 100dvw;
+        
+        position: absolute;
+        right: 200 / 1920 * 100dvw;
+        bottom: 300 / 1080 * 100dvh;
+
+        animation: earth-rocket-motion-horizontal 12s ease-in-out infinite both;
+        
+        @media (orientation: portrait) {
+            animation: earth-rocket-motion-vertical 18s ease-in-out infinite both;
+        }
+    }
+    
+    &__btn {
+        padding: min(57px, 57 / 1080 * 100dvh) min(50px, 50 / 1920 * 100dvw);
+
+        position: absolute;
+        left: 50%;
+        bottom: 23 / 1080 * 100dvh;
+        transform: translateX(-50%);
+
+        background: $button-color;
+
+        text-align: center;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.63);
+    }
+
+    &__background {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between
+    };
+    
+}
