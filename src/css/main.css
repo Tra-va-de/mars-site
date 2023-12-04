@@ -719,4 +719,6 @@ p, a {
   height: min(160px, 30vh);
   width: 100%;
   overflow: hidden;
+  color: #000000;
+  letter-spacing: 15.6px;
 }
