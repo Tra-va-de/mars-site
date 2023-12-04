@@ -2,9 +2,9 @@
     @extend %section-size;
     @include section-position;
 
-    background: linear-gradient(358.26deg, #242A3A -2.15%, #2A3348 98%);
+    background: linear-gradient(360deg, $accent-first-color, $accent-second-color);
     color: white;
-    text-shadow: 0 0 2px #242A3A;
+    text-shadow: 0 0 2px $accent-first-color;
     overflow: hidden;
 
     &__content {
@@ -19,7 +19,7 @@
     
     &__text {
         width: 40%;
-        line-height: min(30px, 50 / 1080 * 100vh);
+        line-height: min(30px, 50 / 1080 * 100dvh);
     }
     
     &__rovers {
@@ -35,7 +35,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 44 / 1080 * 100vh;
+        gap: 44 / 1080 * 100dvh;
     }
     
     &__rover-icon {
@@ -79,7 +79,7 @@
             @include background-frame;
             
             flex-direction: column;
-            gap: 80 / 1080 * 100vh;
+            gap: 80 / 1080 * 100dvh;
         }
         
         &__text {
@@ -94,7 +94,7 @@
     @media screen and (max-width: 700px) and (orientation: portrait) {
         &__rovers {
             grid-template-columns: repeat(2, 1fr);
-            row-gap: 20 / 1080 * 100vh;
+            row-gap: 20 / 1080 * 100dvh;
         }
     }
 }
