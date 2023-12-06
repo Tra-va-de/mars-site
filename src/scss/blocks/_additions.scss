@@ -32,7 +32,7 @@
         border-radius: 50%;
         
         position: relative;
-        animation: orbit-rotation 12s linear infinite both;
+        animation: rotation 12s linear infinite both;
         
         @media screen and (orientation: portrait) {
             padding: $orbit-padding-portrait / 1920 * 100dvw;
@@ -41,6 +41,8 @@
     
     &__mars {
         height: $mars-height / 1080 * 100dvh;
+        
+        animation: rotation 12s linear infinite both reverse;
 
         @media screen and (orientation: portrait) {
             height: auto;

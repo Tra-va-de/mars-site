@@ -200,7 +200,7 @@
     bottom: $bottom-position / $orbit-height * 100%;
     
     // Анимация вращения спутника
-    animation: satellite-rotation 12s linear infinite both;
+    animation: rotation 12s linear infinite reverse both;
 
     // Стили для изображения спутника
     &-img {
