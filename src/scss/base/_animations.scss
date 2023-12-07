@@ -1,0 +1,127 @@
+// header
+@keyframes header-rocket-fly {
+    0% {
+        bottom: 0;
+        right: 110%;
+        rotate: 38.2deg;
+    }
+
+    40% {
+        right: 90%;
+        bottom: 100%;
+        rotate: 0;
+    }
+
+    100% {
+        right: 70%;
+        bottom: 75%;
+        rotate: -38.2deg;
+    }
+}
+
+// about-planet
+@keyframes alien-eye-motion {
+    0% {
+        transform: translateX(-12 / 15 * 100%) rotate(-90deg);
+    }
+
+    100% {
+        transform: translateX(11 / 15 * 100%);
+    }
+}
+
+@keyframes alien-motion {
+    100% {
+        transform: translateY(50%);
+    }
+}
+
+// how-people
+@keyframes how-people-alien-motion {
+    0% {
+        left: 0;
+        transform: translateX(-100%);
+    }
+    
+    32.5% {
+        left: 20%;
+        transform: translateX(-17%);
+    }
+    
+    50%, 100% {
+        left: 100%;
+        transform: translateX(100%);
+    }
+}
+
+@keyframes how-people-rover-motion {
+    0% {
+        left: 0;
+        transform: translateX(-100%);
+    }
+
+    17% {
+        left: 70%;
+        transform: translateX(-50%) rotateY(0deg);
+    }
+
+    18% {
+        transform: rotateY(180deg);
+    }
+
+    34%,
+    48% {
+        left: 50%;
+        transform: rotateY(180deg);
+    }
+
+    49% {
+        transform: rotateY(0deg);
+    }
+
+    60%, 100% {
+        left: 100%;
+        transform: translateX(100%);
+    }
+}
+
+// additions
+@keyframes rotation {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+// earth
+@keyframes earth-rocket-motion-horizontal {
+    0%, 5%, 95%, 100% {
+        bottom: max(20px, 3%);
+    }
+
+    10% {
+        transform: translateY(0);
+    }
+
+    30% {
+        transform: translateY(100%) rotate(0deg);
+    }
+
+    35.5%, 37.5% {
+        transform: translateY(100%) rotate(180deg);
+        bottom: 90%;
+    }
+
+    45%, 50% {
+        transform: translateY(100%) rotate(180deg);
+        bottom: min(100% - 20px, 97%);
+    }
+
+    80% {
+        transform: rotate(180deg);
+    }
+    
+    85.5%, 87.5% {
+        transform: rotate(0deg);
+        bottom: 10%;
+    }
+}
