@@ -14,9 +14,6 @@ const swiper = new Swiper('.swiper', {
     // расстояние между слайдами
     spaceBetween: 130,
 
-    // активный слайд по центру
-    // centeredSlides: true,
-
     // прокрутка мышью
     mousewheel: true,
     // курсор с рукой
@@ -53,6 +50,21 @@ const swiper = new Swiper('.swiper', {
             slidesPerView: 1,
         },
     },
+});
+
+
+// сделали перенастройку размеров слайдов
+// при изменении размера окна
+window.addEventListener('resize', function () {
+    console.log(123);
+    swiper.slides.forEach(slide => {
+        // делаем рассчет высоты автоматическим
+        slide.style.height = '';
+        // Установим явную высоту слайда с небольшой задержкой
+        setTimeout(() => {
+            slide.style.height = slide.clientHeight + 'px';
+        }, 300);
+    });
 });
 
 
@@ -111,7 +123,7 @@ detailsElements.forEach(function (details) {
             if (details.open) {
                 const detailsHeight = slide.querySelector('.professions__details').clientHeight;
                 slide.style.height = detailsHeight + 'px';
-            } 
+            }
             // Если <details> закрыт, восстанавливаем исходную высоту слайда
             else {
                 // Восстанавливаем исходную высоту слайда
