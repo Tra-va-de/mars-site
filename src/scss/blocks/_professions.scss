@@ -1,0 +1,91 @@
+.professions {
+    @extend %section-size;
+    @include section-position;
+
+    height: auto;
+    min-height: 100dvh;
+    overflow-y: auto;
+
+    background: linear-gradient(180deg, #222836 0%, #293146 100%);
+
+    & > .container {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(30px, 125 / 1080 * 100%, 125px);
+    }
+
+    &__title {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__text {
+        font-size: calc(9px + 51 * ((100vw - 280px) / (1920 - 280)));
+        line-height: calc(9px + 51 * ((100vw - 280px) / (1920 - 280)));
+    }
+
+    &__types {
+        height: calc(9px + 51 * ((100vw - 280px) / (1920 - 280)));
+        font-size: calc(9px + 51 * ((100vw - 280px) / (1920 - 280)));
+        line-height: calc(9px + 51 * ((100vw - 280px) / (1920 - 280)));
+        color: #FD9B40;
+        overflow: hidden;
+    }
+
+    
+    &__cards {
+        width: 100%;
+        // height: auto;
+    }
+
+    &__card {
+        @extend %flex-align-center;
+
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        position: relative;
+        background: $button-color;
+        border: 2px solid transparent;
+
+        scale: 0.9;
+        aspect-ratio: 340 / 456;
+
+        transition: scale 1000ms ease-out,
+            border-color 1500ms ease-in-out,
+            height 500ms ease-in-out;
+
+        user-select: none;
+
+        &.swiper-slide-next {
+            scale: 1;
+            border-color: white;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    &__image {
+        width: 192 / 340 * 100%;
+    }
+
+    &__summary {
+        color: #FD9B40;
+
+        /* Скрыть маркер details (треугольник) */
+        list-style: none;
+        list-style-image: none;
+    }
+
+    &__details[open] {
+        min-height: 100%;
+        width: 100%;
+
+        position: absolute;
+        left: 0;
+
+        background: $button-color;
+        padding: 10px;
+
+        animation: sweep .5s ease-in-out both;
+    }
+}

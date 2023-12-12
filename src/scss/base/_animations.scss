@@ -42,13 +42,14 @@
         left: 0;
         transform: translateX(-100%);
     }
-    
+
     32.5% {
         left: 20%;
         transform: translateX(-17%);
     }
-    
-    50%, 100% {
+
+    50%,
+    100% {
         left: 100%;
         transform: translateX(100%);
     }
@@ -79,7 +80,8 @@
         transform: rotateY(0deg);
     }
 
-    60%, 100% {
+    60%,
+    100% {
         left: 100%;
         transform: translateX(100%);
     }
@@ -94,7 +96,11 @@
 
 // earth
 @keyframes earth-rocket-motion-horizontal {
-    0%, 5%, 95%, 100% {
+
+    0%,
+    5%,
+    95%,
+    100% {
         bottom: max(20px, 3%);
     }
 
@@ -106,12 +112,14 @@
         transform: translateY(100%) rotate(0deg);
     }
 
-    35.5%, 37.5% {
+    35.5%,
+    37.5% {
         transform: translateY(100%) rotate(180deg);
         bottom: 90%;
     }
 
-    45%, 50% {
+    45%,
+    50% {
         transform: translateY(100%) rotate(180deg);
         bottom: min(100% - 20px, 97%);
     }
@@ -119,9 +127,23 @@
     80% {
         transform: rotate(180deg);
     }
-    
-    85.5%, 87.5% {
+
+    85.5%,
+    87.5% {
         transform: rotate(0deg);
         bottom: 10%;
+    }
+}
+
+// professions
+@keyframes sweep {
+    0% {
+        opacity: 0;
+        top: 100%;
+    }
+    
+    100% {
+        opacity: 1;
+        top: 0;
     }
 }

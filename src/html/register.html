@@ -6,103 +6,123 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
-    <link rel="stylesheet" href="../css/second-page/style.css">
-    <script src="../js/second-page/script.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 
 <body>
+    <header class="professions">
+        <div class="container container--second-page">
+            <div class="professions__title">
+                <h2 class="professions__text">Присоединяйся к нам:</h2>
+                <ul class="professions__types">
+                    <li class="professions__type">Инженер</li>
+                    <li class="professions__type">Колонист</li>
+                    <li class="professions__type">Терраформист</li>
+                    <li class="professions__type">Инженер</li>
+                </ul>
+            </div>
 
+            <!-- Основной контейнер слайдера -->
+            <div class="professions__cards swiper">
+                <!-- Дополнительная необходимая обертка -->
+                <div class="swiper-wrapper">
+                    <!-- Слайды -->
+                    <div class="professions__card swiper-slide">
+                        <img src="../img/card-icon-1.svg" alt="Изображение инженера" class="professions__image" loading="lazy">
+                        <div class="swiper-lazy-preloader"></div>
+                        <p class="professions__name">Инженер</p>
+                        <details class="professions__details">
+                            <summary class="professions__summary">Подробнее...</summary>
+                            Вам предстоит проектировать и анализировать всю инфраструктуру покорения марса.
+                            Участвовать в создании космических аппаратов и просчете математических закономерностей
+                        </details>
+                    </div>
+                    
+                    <div class="professions__card swiper-slide">
+                        <img src="../img/card-icon-2.svg" alt="Изображение колониста" class="professions__image" loading="lazy">
+                        <div class="swiper-lazy-preloader"></div>
+                        <p class="professions__name">Колонист</p>
+                        <details class="professions__details">
+                            <summary class="professions__summary">Подробнее...</summary>
+                            <div>
+                                Колонист - человек, который колонизирует Марс. Вы первые ступите на марс. Вы первые столкнетесь с
+                                препятствиями на пути к заселению. Вы первопроходцы!
+                                Спектр ваших обязанностей включает в себя все, что потребуется для заселения марса, начиная от
+                                черновых работ и заканчивая мед помощью и сельским хозяйством.
+                            </div>
+                        </details>
+                    </div>
+                    
+                    <div class="professions__card swiper-slide">
+                        <img src="../img/card-icon-3.svg" alt="Изображение терраформиста" class="professions__image" loading="lazy">
+                        <div class="swiper-lazy-preloader"></div>
+                        <p class="professions__name">Терраформист</p>
+                        <details class="professions__details">
+                            <summary class="professions__summary">Подробнее...</summary>
+                            Терраформирование - это процесс изменения окружающей среды планеты, под нужды человека. Вы
+                            архитекторы и творцы целой планеты.
+                            Вам предстоит перестроить Марс на Гео уровне и превратить его из пустыни в райский уголок, такой же
+                            как Земля.
+                        </details>
+                    </div>
+
+                    <div class="professions__card swiper-slide">
+                        <img src="../img/card-icon-1.svg" alt="Изображение инженера" class="professions__image" loading="lazy">
+                        <div class="swiper-lazy-preloader"></div>
+                        <p class="professions__name">Инженер</p>
+                        <details class="professions__details">
+                            <summary class="professions__summary">Подробнее...</summary>
+                            Вам предстоит проектировать и анализировать всю инфраструктуру покорения марса.
+                            Участвовать в создании космических аппаратов и просчете математических закономерностей
+                        </details>
+                    </div>
+                </div>
+                
+                <!-- Стрелочки -->
+                <!-- <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div> -->
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- <section class="quotes">
+            <div class="container">
+                <p class="quotes__text">Подробнее про пилотируемые полеты на марс</p>
+                <a class="quotes__link" href="">Нажми тут</a>
+                <ul class="quotes__frame">
+                    <li class="quotes__frame-item" lang="ru">
+                        <q class="quote">
+                            Жизнь показывает, что и космос будут осваивать не какие-нибудь супермены, а самые простые люди.
+                        </q>
+                        <p class="quote-author">Юрий Гагарин</p>
+                    </li>
+                    <li class="quotes__frame-item" lang="en">
+                        <q class="quote">
+                            That's one small step for a man, one giant leap for mankind.
+                        </q>
+                        <p class="quote-author">Neil Armstrong</p>
+                    </li>
+                </ul>
+            </div>
+        </section> -->
+        
+        <!-- <section class="registration">
+            <form class="registration__form" action="">
+                <h2 class="registration__form-title">Записывайся сейчас</h2>
+                <div class="registration__form-body">
+                    <input type="text" class="registration__form-field" placeholder="Имя">
+                    <input type="text" class="registration__form-field" placeholder="Возраст">
+                    <input type="text" class="registration__form-field" placeholder="Образование и специальность">
+                    <input type="checkbox" class="registration__form-checkbox">
+                    <p class="registration__form-text">согласен на обработку персональных данных</p>
+                    <button class="registration__form-btn">Записаться</button>
+                </div>
+            </form>
+        </section> -->
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../js/second-page/script.js"></script>
 </body>
-<header class="professions">
-    <div class="container">
-        <div class="professions__title">
-            <h2 class="professions__text">Присоединяйся к нам:</h2>
-            <ul class="professions__types">
-                <li class="professions__type">Инженер</li>
-                <li class="professions__type">Колонист</li>
-                <li class="professions__type">Терраформист</li>
-                <li class="professions__type">Инженер</li>
-            </ul>
-        </div>
-        <div class="professions__cards">
-            <div class="professions__card">
-                <img src="../img/card-icon-1.svg" alt="Изображение инженера" class="professions__image">
-                <p class="professions__name">Инженер</p>
-                <details class="professions__details">
-                    <summary>Подробнее...</summary>
-                    Вам предстоит проектировать и анализировать всю инфраструктуру покорения марса.
-                    Участвовать в создании космических аппаратов и просчете математических закономерностей
-                </details>
-            </div>
-            <div class="professions__card">
-                <img src="../img/card-icon-2.svg" alt="Изображение колониста" class="professions__image">
-                <p class="professions__name">Колонист</p>
-                <details class="professions__details">
-                    <summary>Подробнее...</summary>
-                    Колонист - человек, который колонизирует Марс. Вы первые ступите на марс. Вы первые столкнетесь с
-                    препятствиями на пути к заселению. Вы первопроходцы!
-                    Спектр ваших обязанностей включает в себя все, что потребуется для заселения марса, начиная от
-                    черновых работ и заканчивая мед помощью и сельским хозяйством.
-                </details>
-            </div>
-            <div class="professions__card">
-                <img src="../img/card-icon-3.svg" alt="Изображение терраформиста" class="professions__image">
-                <p class="professions__name">Терраформист</p>
-                <details class="professions__details">
-                    <summary>Подробнее...</summary>
-                    Терраформирование - это процесс изменения окружающей среды планеты, под нужды человека. Вы
-                    архитекторы и творцы целой планеты.
-                    Вам предстоит перестроить Марс на Гео уровне и превратить его из пустыни в райский уголок, такой же
-                    как Земля.
-                </details>
-            </div>
-            <div class="professions__card professions__card--additional">
-                <img src="../img/card-icon-1.svg" alt="Изображение инженера" class="professions__image">
-                <p class="professions__name">Инженер</p>
-                <details class="professions__details">
-                    <summary>Подробнее...</summary>
-                    Вам предстоит проектировать и анализировать всю инфраструктуру покорения марса.
-                    Участвовать в создании космических аппаратов и просчете математических закономерностей
-                </details>
-            </div>
-        </div>
-    </div>
-</header>
-<main>
-    <!-- <section class="quotes">
-        <div class="container">
-            <p class="quotes__text">Подробнее про пилотируемые полеты на марс</p>
-            <a class="quotes__link" href="">Нажми тут</a>
-            <ul class="quotes__frame">
-                <li class="quotes__frame-item" lang="ru">
-                    <q class="quote">
-                        Жизнь показывает, что и космос будут осваивать не какие-нибудь супермены, а самые простые люди.
-                    </q>
-                    <p class="quote-author">Юрий Гагарин</p>
-                </li>
-                <li class="quotes__frame-item" lang="en">
-                    <q class="quote">
-                        That's one small step for a man, one giant leap for mankind.
-                    </q>
-                    <p class="quote-author">Neil Armstrong</p>
-                </li>
-            </ul>
-        </div>
-    </section> -->
-
-    <!-- <section class="registration">
-        <form class="registration__form" action="">
-            <h2 class="registration__form-title">Записывайся сейчас</h2>
-            <div class="registration__form-body">
-                <input type="text" class="registration__form-field" placeholder="Имя">
-                <input type="text" class="registration__form-field" placeholder="Возраст">
-                <input type="text" class="registration__form-field" placeholder="Образование и специальность">
-                <input type="checkbox" class="registration__form-checkbox">
-                <p class="registration__form-text">согласен на обработку персональных данных</p>
-                <button class="registration__form-btn">Записаться</button>
-            </div>
-        </form>
-    </section> -->
-</main>
-
 </html>
