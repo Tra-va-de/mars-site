@@ -68,7 +68,7 @@ window.addEventListener('resize', function () {
         setTimeout(() => {
             slide.style.height = '';
         }, 10);
-        
+
         // Установим явную высоту слайда с небольшой задержкой
         setTimeout(() => {
             slide.style.height = slide.clientHeight + 'px';
@@ -124,7 +124,7 @@ detailsElements.forEach(function (details) {
     // Находим родительский слайд
     const slide = details.closest('.swiper-slide');
     let cardHeight;
-    
+
     details.addEventListener('toggle', function () {
         // Если слайд найден, обновляем его размер
         if (slide) {
@@ -141,4 +141,21 @@ detailsElements.forEach(function (details) {
             }
         };
     });
+});
+
+
+// Используем библиотеку hyphenopoly для разбиения слов на слоги
+Hyphenopoly.config({
+    require: {
+        "ru": "приветстогосвета",
+    },
+    setup: {
+        selectors: {
+            ".professions": {}
+        }
+    },
+    paths: {
+        "patterndir": "../js/hyphenopoly/patterns/", //path to the directory of pattern files
+        "maindir": "../js/hyphenopoly/" //path to the directory where the other ressources are stored
+    }
 });
