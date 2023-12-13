@@ -150,9 +150,14 @@ Hyphenopoly.config({
         "en-us": "Supercalifragilisticexpialidocious",
     },
     setup: {
+        // Основной язык
+        defaultLanguage: "ru",
+        // Селекторы для переносов
         selectors: {
-            ".professions": {}
-        }
+            ".professions": {},
+            // Устанавливаем селектор для исключения
+            ".professions__types": { minWordLength: 1000 },
+        }, 
     },
     paths: {
         "patterndir": "../js/hyphenopoly/patterns/", //path to the directory of pattern files
