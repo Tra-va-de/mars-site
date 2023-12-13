@@ -58,21 +58,30 @@ const swiper = new Swiper('.swiper', {
 window.addEventListener('resize', function () {
     console.log(123);
     swiper.slides.forEach(slide => {
+        // Закрываем все details внутри слайдов
+        const details = slide.querySelector('details');
+        if (details) {
+            details.removeAttribute('open');
+        }
+
         // делаем рассчет высоты автоматическим
-        slide.style.height = '';
+        setTimeout(() => {
+            slide.style.height = '';
+        }, 10);
+        
         // Установим явную высоту слайда с небольшой задержкой
         setTimeout(() => {
             slide.style.height = slide.clientHeight + 'px';
-        }, 300);
+        }, 10);
     });
 });
 
 
 // настройка слайдов и взаимодействия с ними
 swiper.slides.forEach((slide, index) => {
-    // Получим высоту слайда
+    // // Получим высоту слайда
     const cardHeight = slide.clientHeight;
-    // Установим явную высоту слайда
+    // // Установим явную высоту слайда
     slide.style.height = cardHeight + 'px';
 
     // дополнительные настройки при наведении курсора
@@ -114,13 +123,14 @@ const detailsElements = document.querySelectorAll('.swiper-slide details');
 detailsElements.forEach(function (details) {
     // Находим родительский слайд
     const slide = details.closest('.swiper-slide');
-    const cardHeight = slide.clientHeight;
-
+    let cardHeight;
+    
     details.addEventListener('toggle', function () {
         // Если слайд найден, обновляем его размер
         if (slide) {
             // Если <details> открыт, получаем высоту его содержимого и обновляем высоту слайда
             if (details.open) {
+                cardHeight = slide.clientHeight;
                 const detailsHeight = slide.querySelector('.professions__details').clientHeight;
                 slide.style.height = detailsHeight + 'px';
             }
