@@ -147,6 +147,7 @@ detailsElements.forEach(function (details) {
 Hyphenopoly.config({
     require: {
         "ru": "приветстогосвета",
+        "en-us": "Supercalifragilisticexpialidocious",
     },
     setup: {
         selectors: {
