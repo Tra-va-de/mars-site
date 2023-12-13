@@ -1019,6 +1019,7 @@ p, a {
   font-size: calc(9px + 51 * (100vw - 280px) / 1640);
   line-height: calc(9px + 51 * (100vw - 280px) / 1640);
   color: #FD9B40;
+  text-align: right;
   overflow: hidden;
 }
 .professions__cards {
@@ -1068,4 +1069,7 @@ p, a {
   padding: 10px;
   -webkit-animation: sweep 0.5s ease-in-out both;
           animation: sweep 0.5s ease-in-out both;
+}
+.professions__description {
+  font-size: inherit;
 }

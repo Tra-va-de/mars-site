@@ -28,14 +28,16 @@
         height: calc(9px + 51 * ((100vw - 280px) / (1920 - 280)));
         font-size: calc(9px + 51 * ((100vw - 280px) / (1920 - 280)));
         line-height: calc(9px + 51 * ((100vw - 280px) / (1920 - 280)));
+
         color: #FD9B40;
+        text-align: right;
+
         overflow: hidden;
     }
 
     
     &__cards {
         width: 100%;
-        // height: auto;
     }
 
     &__card {
@@ -87,5 +89,9 @@
         padding: 10px;
 
         animation: sweep .5s ease-in-out both;
+    }
+
+    &__description {
+        font-size: inherit;
     }
 }
