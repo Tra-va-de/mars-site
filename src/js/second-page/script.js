@@ -56,7 +56,6 @@ const swiper = new Swiper('.swiper', {
 // сделали перенастройку размеров слайдов
 // при изменении размера окна
 window.addEventListener('resize', function () {
-    console.log(123);
     swiper.slides.forEach(slide => {
         // Закрываем все details внутри слайдов
         const details = slide.querySelector('details');
