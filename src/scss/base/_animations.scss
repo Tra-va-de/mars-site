@@ -147,3 +147,15 @@
         top: 0;
     }
 }
+
+@keyframes move-up {
+    28%, 33% {
+        transform: translateY(-100%);
+    }
+    62%, 67% {
+        transform: translateY(-200%);
+    }
+    95%, 100% {
+        transform: translateY(-300%);
+    }
+}
