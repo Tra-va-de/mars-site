@@ -91,7 +91,7 @@ legend {
   display: block;
 }
 
-.professions, .earth, .additions, .how-people, .about-planet, .header {
+.quotes, .professions, .earth, .additions, .how-people, .about-planet, .header {
   height: 100dvh;
   width: 100%;
   overflow: hidden;
@@ -126,7 +126,7 @@ legend {
           align-items: center;
 }
 
-.professions__content, .professions__background, .earth__content, .earth__background, .additions__deimos-img, .additions__phobos-img, .additions__content, .additions__background, .how-people__content, .how-people__background, .alien__body, .about-planet__content, .about-planet__background, .header__planet, .header__content, .header__background, .container {
+.quotes__content, .quotes__background, .professions__content, .professions__background, .earth__content, .earth__background, .additions__deimos-img, .additions__phobos-img, .additions__content, .additions__background, .how-people__content, .how-people__background, .alien__body, .about-planet__content, .about-planet__background, .header__planet, .header__content, .header__background, .container {
   width: 100%;
   height: 100%;
 }
@@ -1119,4 +1119,79 @@ p, a {
 }
 .professions__description {
   font-size: inherit;
+}
+
+.quotes {
+  position: relative;
+  height: auto;
+  text-align: center;
+}
+.quotes__content {
+  position: relative;
+  z-index: 2;
+}
+.quotes__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.quotes__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: clamp(25px, 9.2592592593dvh, 100px);
+}
+.quotes__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: clamp(20px, 4.6296296296dvh, 50px);
+}
+.quotes__link {
+  font-size: calc(0.9rem + 33 * (100dvw - 280px) / (1920 - 280));
+  line-height: calc(0.9rem + 33 * (100dvw - 280px) / (1920 - 280));
+}
+.quotes__link::after {
+  content: "Нажми тут";
+  display: block;
+  opacity: 0.05;
+  margin-top: clamp(20px, 3.7037037037dvh, 40px);
+}
+.quotes__frame {
+  padding: min(110px, 15.2777777778%) min(120px, 9.1254752852%);
+  background: #39435E;
+  text-align: left;
+}
+.quotes__frame-item:not(:last-of-type) {
+  margin-bottom: 12%;
+}
+.quotes__background {
+  background: url("../img/quotes_2.svg") left 130%/contain no-repeat, url("../img/quotes_1.svg") left bottom/contain no-repeat, url("../img/quotes_3.svg") right bottom/contain no-repeat, -webkit-gradient(linear, left top, left bottom, from(#293145), to(#222837));
+  background: url("../img/quotes_2.svg") left 130%/contain no-repeat, url("../img/quotes_1.svg") left bottom/contain no-repeat, url("../img/quotes_3.svg") right bottom/contain no-repeat, linear-gradient(180deg, #293145 0%, #222837 100%);
+}
+
+.quote {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: clamp(20px, 4.6296296296dvh, 50px);
+}
+.quote:nth-child(2n) .quote__text {
+  color: #FFDEB7;
+}
+.quote__author {
+  text-align: right;
+  color: #FD9B40;
 }

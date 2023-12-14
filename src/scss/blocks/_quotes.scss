@@ -1,0 +1,64 @@
+.quotes {
+    @extend %section-size;
+    @include section-position;
+
+    height: auto;
+
+    text-align: center;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(25px, 100 / 1080 * 100dvh, 100px);
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(20px, 50 / 1080 * 100dvh, 50px);
+    }
+
+    &__link {
+        @include adaptive-font($font-size-large, $font-size-large-mobile);
+        @include adaptive-line-height($font-size-large, $font-size-large-mobile);
+
+        &::after {
+            content: 'Нажми тут';
+            display: block;
+            opacity: 0.05;
+            margin-top: clamp(20px, 40 / 1080 * 100dvh, 40px);
+        }
+    }
+
+    &__frame {
+        padding: min(110px, 110 / 720 * 100%) min(120px, 120 / 1315 * 100%);
+        background: $button-color;
+        text-align: left;
+    }
+
+    &__frame-item:not(:last-of-type) {
+        margin-bottom: 12%;
+    }
+
+    &__background {
+        background: url('../img/quotes_2.svg') left 130% / contain no-repeat,
+            url('../img/quotes_1.svg') left bottom / contain no-repeat,
+            url('../img/quotes_3.svg') right bottom / contain no-repeat,
+            linear-gradient(180deg, #293145 0%, #222837 100%);
+    }
+}
+
+.quote {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(20px, 50 / 1080 * 100dvh, 50px);
+
+    &:nth-child(2n) &__text {
+        color: #FFDEB7;
+    }
+
+    &__author {
+        text-align: right;
+        color: #FD9B40;
+    }
+}
