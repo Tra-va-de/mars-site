@@ -3,8 +3,6 @@
     @include section-position;
 
     height: auto;
-    min-height: 100dvh;
-    overflow-y: auto;
 
     background: linear-gradient(180deg, #222836 0%, #293146 100%);
 
@@ -17,24 +15,37 @@
     &__title {
         display: flex;
         justify-content: space-between;
-    }
+        align-items: center;
 
-    &__text {
-        font-size: calc(9px + 51 * ((100vw - 280px) / (1920 - 280)));
-        line-height: calc(9px + 51 * ((100vw - 280px) / (1920 - 280)));
+        @media screen and (max-width: 670px) {
+            flex-direction: column;
+            gap: 20px;
+        }
     }
-
+    
     &__types {
-        height: calc(9px + 51 * ((100vw - 280px) / (1920 - 280)));
-        font-size: calc(9px + 51 * ((100vw - 280px) / (1920 - 280)));
-        line-height: calc(9px + 51 * ((100vw - 280px) / (1920 - 280)));
-
+        @include adaptive-style('height', $font-size-large, $font-size-large-mobile);
+        
         color: #FD9B40;
-        text-align: right;
-
+        
         overflow: hidden;
+        
+        /* не сужается */
+        flex: 0 0 auto;
     }
-
+    
+    &__type {
+        @include adaptive-font($font-size-large, $font-size-large-mobile);
+        @include adaptive-line-height($font-size-large, $font-size-large-mobile);
+        
+        text-align: right;
+        
+        animation: move-up 2.5s linear 0s infinite;
+        
+        @media screen and (max-width: 670px) {
+            text-align: center;
+        }
+    }
     
     &__cards {
         width: 100%;
