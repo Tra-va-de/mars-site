@@ -1,9 +1,5 @@
 .btn-back {
-    @extend %hover-scale;
-    @extend %active-color;
-
-    transition: scale .5s, 
-                filter .3s;
+    @extend %hover-and-active;
 
     position: fixed;
     top: 40px;

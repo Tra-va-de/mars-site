@@ -9,17 +9,18 @@
     }
     
     &__btn {
-        display: inline-block;
+        @extend %hover-and-active;
+
         width: fit-content;
         padding: calc(0.6rem + 12 * ((100vw - 320px) / (1920 - 320))) calc((0.6rem + 12 * ((100vw - 320px) / (1920 - 320))) * 3.5);
-        text-decoration: none;
-        background-color: #39435E;
-        color: unset;
+        background-color: $button-color;
         text-align: center;
+
+        user-select: none;
     }
     
     &__background {
-        background-color: #222735;
+        background-color: $accent-first-color;
     }
 
     &__flight {
