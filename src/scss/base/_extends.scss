@@ -12,6 +12,14 @@
     }
 }
 
+%active-color {
+    transition: filter 300ms;
+
+    &:active {
+        filter: hue-rotate(15deg);
+    }
+}
+
 %flex-all-center {
     display: flex;
     justify-content: center;

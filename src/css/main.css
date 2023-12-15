@@ -97,15 +97,26 @@ legend {
   overflow: hidden;
 }
 
-.form__btn, .sidenav__item, .sidenav__logo {
+.btn-back, .form__btn, .sidenav__item, .sidenav__logo {
   -webkit-transition: scale 300ms;
   transition: scale 300ms;
 }
-.form__btn:hover, .sidenav__item:hover, .sidenav__logo:hover {
+.btn-back:hover, .form__btn:hover, .sidenav__item:hover, .sidenav__logo:hover {
   scale: 1.1;
 }
 
-.form__title, .registration, .footer, .additions__orbit {
+.btn-back {
+  -webkit-transition: -webkit-filter 300ms;
+  transition: -webkit-filter 300ms;
+  transition: filter 300ms;
+  transition: filter 300ms, -webkit-filter 300ms;
+}
+.btn-back:active {
+  -webkit-filter: hue-rotate(15deg);
+          filter: hue-rotate(15deg);
+}
+
+.btn-back__link, .form__title, .registration, .footer, .additions__orbit {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1300,4 +1311,24 @@ p, a, label, input, input::placeholder, button {
 .form__btn:active {
   -webkit-filter: hue-rotate(15deg);
           filter: hue-rotate(15deg);
+}
+
+.btn-back {
+  -webkit-transition: scale 0.5s, -webkit-filter 0.3s;
+  transition: scale 0.5s, -webkit-filter 0.3s;
+  transition: scale 0.5s, filter 0.3s;
+  transition: scale 0.5s, filter 0.3s, -webkit-filter 0.3s;
+  position: fixed;
+  top: 40px;
+  left: 0;
+  z-index: 1000;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.btn-back__link {
+  width: 12.2916666667dvw;
+  aspect-ratio: 236/102;
+  background: #39435E;
 }
