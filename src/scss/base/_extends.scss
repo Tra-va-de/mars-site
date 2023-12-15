@@ -20,6 +20,13 @@
     }
 }
 
+%hover-and-active {
+    @extend %hover-scale;
+    @extend %active-color;
+
+    transition: scale 300ms, filter 300ms;
+}
+
 %flex-all-center {
     display: flex;
     justify-content: center;
