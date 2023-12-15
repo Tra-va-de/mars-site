@@ -157,10 +157,85 @@ Hyphenopoly.config({
             ".professions": {},
             // Устанавливаем селектор для исключения
             ".professions__types": { minWordLength: 1000 },
-        }, 
+        },
     },
     paths: {
         "patterndir": "../js/hyphenopoly/patterns/", //path to the directory of pattern files
         "maindir": "../js/hyphenopoly/" //path to the directory where the other ressources are stored
     }
 });
+
+
+// Получаем все input'ы с типом "text"
+const inputsElements = document.querySelectorAll('input[type="text"]');
+// Объект для хранения идентификаторов интервалов
+let intervalIds = {};
+// Объект для хранения изначального текста
+let originalPlaceholdersText = {};
+
+// Функция для определения ширины текста
+function getTextWidth(text, font) {
+    const canvas = document.createElement('canvas');
+    const context = canvas.getContext('2d');
+    context.font = font;
+    const metrics = context.measureText(text);
+    return metrics.width;
+}
+
+// Функция проверки размеров placeholder'ов
+function checkPlaceholdersSize(inputsElements) {
+    // Перебор объекта и очистка 
+    // всех запущенных интервалов
+    for (let id in intervalIds) {
+        console.log(id);
+        clearInterval(intervalIds[id]);
+    }
+
+    // Очистка объекта
+    intervalIds = {};
+
+    inputsElements.forEach(input => {
+        // Получаем изначальный текст placeholder'а
+        const originalPlaceholderText = input.getAttribute('placeholder');
+        // Получаем уникальный идентификатор input (например, id)
+        const inputId = input.id;
+
+        // Если для данного inputId еще не сохранено изначальное 
+        // значение placeholder'а, сохраняем
+        if (!originalPlaceholdersText[inputId]) {
+            originalPlaceholdersText[inputId] = originalPlaceholderText;
+        }
+
+        // Получаем ширину input и ширину текста placeholder'а
+        const inputWidth = input.clientWidth;
+        const textWidth = getTextWidth(originalPlaceholderText, getComputedStyle(input).font);
+
+        // Если текст placeholder'а шире, чем сам input 
+        // и интервал еще не создан
+        if (textWidth > inputWidth && !intervalIds[input]) {
+            // Создаем интервал для бегущей строки в placeholder'е
+            intervalIds[inputId] = setInterval(() => {
+                // Получаем текущий текст placeholder'а
+                const placeholderText = input.getAttribute('placeholder');
+                // Создаем новый текст с бегущей строкой
+                const scrolledText = placeholderText.substring(1) + placeholderText[0];
+                // Устанавливаем новый текст в placeholder
+                input.setAttribute('placeholder', scrolledText);
+            }, 150); // Изменение каждые 200 миллисекунд
+        }
+        else {
+            // Если текст placeholder'а не шире input или интервал уже создан,
+            // восстанавливаем изначальный текст
+            input.setAttribute('placeholder', originalPlaceholdersText[inputId]);
+        }
+    });
+}
+
+// Подключаем вышеописанную функцию к событию
+// изменения размеров окна
+window.addEventListener('resize', function () {
+    checkPlaceholdersSize(inputsElements);
+});
+
+// Изначальный запуск
+checkPlaceholdersSize(inputsElements);
