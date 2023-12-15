@@ -20,7 +20,7 @@ h2 {
     @include adaptive-line-height($pc-font-size, $mobile-font-size);
 }
 
-p, a {
+p, a, label, input, input::placeholder, button {
     $pc-font-size: $font-size-main;
     $mobile-font-size: $font-size-main-mobile;
 

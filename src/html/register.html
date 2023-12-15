@@ -131,19 +131,24 @@
             </div>
         </section>
 
-        <!-- <section class="registration">
-            <form class="registration__form" action="">
-                <h2 class="registration__form-title">Записывайся сейчас</h2>
-                <div class="registration__form-body">
-                    <input type="text" class="registration__form-field" placeholder="Имя">
-                    <input type="text" class="registration__form-field" placeholder="Возраст">
-                    <input type="text" class="registration__form-field" placeholder="Образование и специальность">
-                    <input type="checkbox" class="registration__form-checkbox">
-                    <p class="registration__form-text">согласен на обработку персональных данных</p>
-                    <button class="registration__form-btn">Записаться</button>
-                </div>
-            </form>
-        </section> -->
+        <section class="registration">
+            <div class="container container--second-page">
+                <form class="registration__form form" action="#!">
+                    <h2 class="form__title">Записывайся сейчас</h2>
+                    <div class="form__body">
+                        <div class="form__wrapper">
+                            <input class="form__field" type="text" placeholder="Имя" id="name-field">
+                            <input class="form__field" type="text" placeholder="Возраст" id="age-field">
+                            <input class="form__field" type="text" placeholder="Образование и специальность" id="education-field">
+                            <input class="form__checkbox" type="checkbox" id="form-checkbox">
+                            <label class="form__label" for="form-checkbox">согласен на обработку персональных данных</label>
+                        </div>
+                        <div class="form__wrapper">
+                            <button class="form__btn">Записаться</button>
+                        </div>
+                </form>
+            </div>
+        </section>
     </main>
 
     <!-- Подключение SwiperJS -->

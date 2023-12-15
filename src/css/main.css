@@ -97,15 +97,15 @@ legend {
   overflow: hidden;
 }
 
-.sidenav__item, .sidenav__logo {
+.form__btn, .sidenav__item, .sidenav__logo {
   -webkit-transition: scale 300ms;
   transition: scale 300ms;
 }
-.sidenav__item:hover, .sidenav__logo:hover {
+.form__btn:hover, .sidenav__item:hover, .sidenav__logo:hover {
   scale: 1.1;
 }
 
-.footer, .additions__orbit {
+.form__title, .registration, .footer, .additions__orbit {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -147,7 +147,27 @@ h2 {
   line-height: calc(0.9rem + 33 * (100dvw - 280px) / (1920 - 280));
 }
 
-p, a {
+input::-webkit-input-placeholder {
+  font-size: calc(0.78rem + 6.6 * (100dvw - 280px) / (1920 - 280));
+  line-height: calc(0.78rem + 21.6 * (100dvw - 280px) / (1920 - 280));
+}
+
+input::-moz-placeholder {
+  font-size: calc(0.78rem + 6.6 * (100dvw - 280px) / (1920 - 280));
+  line-height: calc(0.78rem + 21.6 * (100dvw - 280px) / (1920 - 280));
+}
+
+input:-ms-input-placeholder {
+  font-size: calc(0.78rem + 6.6 * (100dvw - 280px) / (1920 - 280));
+  line-height: calc(0.78rem + 21.6 * (100dvw - 280px) / (1920 - 280));
+}
+
+input::-ms-input-placeholder {
+  font-size: calc(0.78rem + 6.6 * (100dvw - 280px) / (1920 - 280));
+  line-height: calc(0.78rem + 21.6 * (100dvw - 280px) / (1920 - 280));
+}
+
+p, a, label, input, input::placeholder, button {
   font-size: calc(0.78rem + 6.6 * (100dvw - 280px) / (1920 - 280));
   line-height: calc(0.78rem + 21.6 * (100dvw - 280px) / (1920 - 280));
 }
@@ -1061,8 +1081,8 @@ p, a {
   font-size: calc(0.9rem + 33 * (100dvw - 280px) / (1920 - 280));
   line-height: calc(0.9rem + 33 * (100dvw - 280px) / (1920 - 280));
   text-align: right;
-  -webkit-animation: move-up 2.5s linear 0s infinite;
-          animation: move-up 2.5s linear 0s infinite;
+  -webkit-animation: move-up 4s linear 0s infinite;
+          animation: move-up 4s linear 0s infinite;
 }
 @media screen and (max-width: 670px) {
   .professions__type {
@@ -1194,4 +1214,90 @@ p, a {
 .quote__author {
   text-align: right;
   color: #FD9B40;
+}
+
+.registration {
+  background: #FFB762;
+}
+.registration > .container {
+  padding-top: min(286px, 16.0403813797%);
+  padding-bottom: min(286px, 16.0403813797%);
+}
+
+.form {
+  background: #39435E;
+  text-align: center;
+}
+.form__title {
+  background: #222735;
+  aspect-ratio: 1315/183;
+}
+.form__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: min(160px, 13.201320132dvh);
+  padding: 11.6504854369% 11.7870722433%;
+}
+.form__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+.form__field {
+  width: 100%;
+  padding: 0 1.2%;
+  background: #2B344B;
+  border: 2px solid transparent;
+}
+.form__field::-webkit-input-placeholder {
+  position: relative;
+  -webkit-animation: input-scrolling 2s ease-in-out 0s infinite;
+          animation: input-scrolling 2s ease-in-out 0s infinite;
+}
+.form__field::-moz-placeholder {
+  position: relative;
+  animation: input-scrolling 2s ease-in-out 0s infinite;
+}
+.form__field:-ms-input-placeholder {
+  position: relative;
+  animation: input-scrolling 2s ease-in-out 0s infinite;
+}
+.form__field::-ms-input-placeholder {
+  position: relative;
+  animation: input-scrolling 2s ease-in-out 0s infinite;
+}
+.form__field::placeholder {
+  position: relative;
+  -webkit-animation: input-scrolling 2s ease-in-out 0s infinite;
+          animation: input-scrolling 2s ease-in-out 0s infinite;
+}
+.form__field:focus {
+  border-color: #FD9B40;
+}
+.form__checkbox {
+  width: 4.5627376426%;
+  aspect-ratio: 1;
+  border: none;
+}
+.form__btn {
+  padding: 0 13%;
+  aspect-ratio: 526/115;
+  background: #4B5A82;
+}
+.form__btn:active {
+  -webkit-filter: hue-rotate(15deg);
+          filter: hue-rotate(15deg);
 }
