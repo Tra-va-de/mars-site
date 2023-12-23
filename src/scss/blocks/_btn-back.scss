@@ -13,6 +13,7 @@
 
         width: 236 / 1920 * 100dvw;
         aspect-ratio: 236 / 102;
+        min-width: 60px;
 
         background: $button-color;
     }

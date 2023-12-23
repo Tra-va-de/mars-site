@@ -1338,5 +1338,6 @@ p, a, label, input, input::placeholder, button {
 .btn-back__link {
   width: 12.2916666667dvw;
   aspect-ratio: 236/102;
+  min-width: 60px;
   background: #39435E;
 }

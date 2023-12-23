@@ -78,9 +78,9 @@ window.addEventListener('resize', function () {
 
 // настройка слайдов и взаимодействия с ними
 swiper.slides.forEach((slide, index) => {
-    // // Получим высоту слайда
+    // Получим высоту слайда
     const cardHeight = slide.clientHeight;
-    // // Установим явную высоту слайда
+    // Установим явную высоту слайда
     slide.style.height = cardHeight + 'px';
 
     // дополнительные настройки при наведении курсора
