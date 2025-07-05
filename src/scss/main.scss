@@ -1,25 +1,26 @@
-@import "../fonts/Gputeks/stylesheets.css";
+// Abstracts
+@import "./abstracts/variables";
+@import "./abstracts/functions";
+@import "./abstracts/mixins";
+@import "./abstracts/extends";
 
 // Base
 @import "./base/reset";
-@import "./base/vars";
-@import "./base/functions";
-@import "./base/extends";
-@import "./base/mixins";
-@import "./base/base";
+@import "./base/typography";
 @import "./base/animations";
 
-// Blocks
-@import "./blocks/sidenav";
-@import "./blocks/header";
-@import "./blocks/about-planet";
-@import "./blocks/how-people";
-@import "./blocks/additions";
-@import "./blocks/earth";
-@import "./blocks/footer";
+// Components
+@import "./components/container";
+@import "./components/sidenav";
+@import "./components/btn-back";
 
-// Second page
-@import "./blocks/professions";
-@import "./blocks/quotes";
-@import "./blocks/registration";
-@import "./blocks/btn-back"
+// Layout
+@import "./layout/header";
+@import "./layout/footer";
+@import "./layout/about-planet";
+@import "./layout/how-people";
+@import "./layout/earth";
+@import "./layout/additions";
+@import "./layout/professions";
+@import "./layout/quotes";
+@import "./layout/registration";

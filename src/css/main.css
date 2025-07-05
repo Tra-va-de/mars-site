@@ -1,5 +1,63 @@
 @charset "UTF-8";
 @import "../fonts/Gputeks/stylesheets.css";
+.quotes, .professions, .additions, .earth, .how-people, .about-planet, .header {
+  height: 100dvh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.form__btn, .sidenav__item, .sidenav__logo, .earth__btn, .header__btn, .btn-back {
+  -webkit-transition: scale 300ms;
+  transition: scale 300ms;
+}
+.form__btn:hover, .sidenav__item:hover, .sidenav__logo:hover, .earth__btn:hover, .header__btn:hover, .btn-back:hover {
+  scale: 1.1;
+}
+
+.earth__btn, .header__btn, .btn-back {
+  -webkit-transition: -webkit-filter 300ms;
+  transition: -webkit-filter 300ms;
+  transition: filter 300ms;
+  transition: filter 300ms, -webkit-filter 300ms;
+}
+.earth__btn:active, .header__btn:active, .btn-back:active {
+  -webkit-filter: hue-rotate(15deg);
+          filter: hue-rotate(15deg);
+}
+
+.earth__btn, .header__btn, .btn-back {
+  -webkit-transition: scale 300ms, -webkit-filter 300ms;
+  transition: scale 300ms, -webkit-filter 300ms;
+  transition: scale 300ms, filter 300ms;
+  transition: scale 300ms, filter 300ms, -webkit-filter 300ms;
+}
+
+.form__title, .registration, .additions__orbit, .footer, .btn-back__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.professions__card, .earth__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.quotes__content, .quotes__background, .professions__content, .professions__background, .additions__deimos-img, .additions__phobos-img, .additions__content, .additions__background, .earth__content, .earth__background, .how-people__content, .how-people__background, .alien__body, .about-planet__content, .about-planet__background, .header__planet, .header__content, .header__background, .container {
+  width: 100%;
+  height: 100%;
+}
+
 /* Reset and base styles  */
 * {
   padding: 0px;
@@ -91,64 +149,6 @@ legend {
   display: block;
 }
 
-.quotes, .professions, .earth, .additions, .how-people, .about-planet, .header {
-  height: 100dvh;
-  width: 100%;
-  overflow: hidden;
-}
-
-.form__btn, .sidenav__item, .sidenav__logo, .btn-back, .earth__btn, .header__btn {
-  -webkit-transition: scale 300ms;
-  transition: scale 300ms;
-}
-.form__btn:hover, .sidenav__item:hover, .sidenav__logo:hover, .btn-back:hover, .earth__btn:hover, .header__btn:hover {
-  scale: 1.1;
-}
-
-.btn-back, .earth__btn, .header__btn {
-  -webkit-transition: -webkit-filter 300ms;
-  transition: -webkit-filter 300ms;
-  transition: filter 300ms;
-  transition: filter 300ms, -webkit-filter 300ms;
-}
-.btn-back:active, .earth__btn:active, .header__btn:active {
-  -webkit-filter: hue-rotate(15deg);
-          filter: hue-rotate(15deg);
-}
-
-.btn-back, .earth__btn, .header__btn {
-  -webkit-transition: scale 300ms, -webkit-filter 300ms;
-  transition: scale 300ms, -webkit-filter 300ms;
-  transition: scale 300ms, filter 300ms;
-  transition: scale 300ms, filter 300ms, -webkit-filter 300ms;
-}
-
-.btn-back__link, .form__title, .registration, .footer, .additions__orbit {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.professions__card, .earth__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.quotes__content, .quotes__background, .professions__content, .professions__background, .earth__content, .earth__background, .additions__deimos-img, .additions__phobos-img, .additions__content, .additions__background, .how-people__content, .how-people__background, .alien__body, .about-planet__content, .about-planet__background, .header__planet, .header__content, .header__background, .container {
-  width: 100%;
-  height: 100%;
-}
-
 html, body {
   font-family: "Gputeks", sans-serif;
   color: #FFFFFF;
@@ -188,30 +188,6 @@ input::-ms-input-placeholder {
 p, a, label, input, input::placeholder, button {
   font-size: calc(0.78rem + 6.6 * (100dvw - 280px) / (1920 - 280));
   line-height: calc(0.78rem + 21.6 * (100dvw - 280px) / (1920 - 280));
-}
-
-.container {
-  padding: 80px 11% 80px 70px;
-}
-@media screen and (max-width: 1300px) {
-  .container {
-    padding: 80px 15% 80px 70px;
-  }
-}
-@media screen and (min-width: 1921px) {
-  .container {
-    padding: 80px 180px 80px 70px;
-  }
-}
-@media screen and (max-width: 870px) {
-  .container {
-    padding: 20px 80px 40px 20px;
-  }
-}
-
-.container--second-page {
-  padding-left: 15.625%;
-  padding-right: 15.625%;
 }
 
 @-webkit-keyframes header-rocket-fly {
@@ -499,6 +475,30 @@ p, a, label, input, input::placeholder, button {
             transform: translateY(-300%);
   }
 }
+.container {
+  padding: 80px 11% 80px 70px;
+}
+@media screen and (max-width: 1300px) {
+  .container {
+    padding: 80px 15% 80px 70px;
+  }
+}
+@media screen and (min-width: 1921px) {
+  .container {
+    padding: 80px 180px 80px 70px;
+  }
+}
+@media screen and (max-width: 870px) {
+  .container {
+    padding: 20px 80px 40px 20px;
+  }
+}
+
+.container--second-page {
+  padding-left: 15.625%;
+  padding-right: 15.625%;
+}
+
 .sidenav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -587,6 +587,23 @@ p, a, label, input, input::placeholder, button {
   font-size: 1rem;
 }
 
+.btn-back {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  z-index: 1000;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.btn-back__link {
+  width: 12.2916666667dvw;
+  aspect-ratio: 236/102;
+  min-width: 60px;
+  background: #39435E;
+}
+
 .header {
   position: relative;
 }
@@ -642,6 +659,15 @@ p, a, label, input, input::placeholder, button {
   rotate: -38.2deg;
   -webkit-animation: header-rocket-fly 5s linear 1s 1 both;
           animation: header-rocket-fly 5s linear 1s 1 both;
+}
+
+.footer {
+  background: #FFB876;
+  height: min(160px, 30vh);
+  width: 100%;
+  overflow: hidden;
+  color: #000000;
+  letter-spacing: 15.6px;
 }
 
 .about-planet {
@@ -863,6 +889,61 @@ p, a, label, input, input::placeholder, button {
   }
 }
 
+.earth {
+  position: relative;
+  background-color: #2B344B;
+}
+.earth__content {
+  position: relative;
+  z-index: 2;
+}
+.earth__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.earth__text {
+  line-height: normal;
+  width: 52.0833333333dvw;
+  text-shadow: 0 0 3px #293246;
+}
+.earth__btn {
+  padding: min(57px, 5.2777777778dvh) min(50px, 2.6041666667dvw);
+  position: absolute;
+  left: 50%;
+  bottom: 2.1296296296dvh;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: #39435E;
+  text-align: center;
+  -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.63);
+          box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.63);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.earth__background {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.earth__rocket {
+  width: 6.7708333333dvw;
+  position: absolute;
+  right: 22%;
+  bottom: 27.7777777778dvh;
+  -webkit-animation: earth-rocket-motion-horizontal 12s ease-in-out infinite both;
+          animation: earth-rocket-motion-horizontal 12s ease-in-out infinite both;
+}
+
 .additions {
   position: relative;
   background: #FFB762;
@@ -980,70 +1061,6 @@ p, a, label, input, input::placeholder, button {
   .additions__deimos::after {
     opacity: 0;
   }
-}
-
-.earth {
-  position: relative;
-  background-color: #2B344B;
-}
-.earth__content {
-  position: relative;
-  z-index: 2;
-}
-.earth__background {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.earth__text {
-  line-height: normal;
-  width: 52.0833333333dvw;
-  text-shadow: 0 0 3px #293246;
-}
-.earth__btn {
-  padding: min(57px, 5.2777777778dvh) min(50px, 2.6041666667dvw);
-  position: absolute;
-  left: 50%;
-  bottom: 2.1296296296dvh;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  background: #39435E;
-  text-align: center;
-  -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.63);
-          box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.63);
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-.earth__background {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.earth__rocket {
-  width: 6.7708333333dvw;
-  position: absolute;
-  right: 22%;
-  bottom: 27.7777777778dvh;
-  -webkit-animation: earth-rocket-motion-horizontal 12s ease-in-out infinite both;
-          animation: earth-rocket-motion-horizontal 12s ease-in-out infinite both;
-}
-
-.footer {
-  background: #FFB876;
-  height: min(160px, 30vh);
-  width: 100%;
-  overflow: hidden;
-  color: #000000;
-  letter-spacing: 15.6px;
 }
 
 .professions {
@@ -1323,21 +1340,4 @@ p, a, label, input, input::placeholder, button {
 .form__btn:active {
   -webkit-filter: hue-rotate(15deg);
           filter: hue-rotate(15deg);
-}
-
-.btn-back {
-  position: fixed;
-  top: 40px;
-  left: 0;
-  z-index: 1000;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-.btn-back__link {
-  width: 12.2916666667dvw;
-  aspect-ratio: 236/102;
-  min-width: 60px;
-  background: #39435E;
 }

@@ -1,0 +1,21 @@
+.container {
+    padding: 80px 11% 80px 70px;
+    @extend %full-size;
+
+    @media screen and (max-width: 1300px) {
+        padding: 80px 15% 80px 70px;
+    }
+
+    @media screen and (min-width: 1921px) {
+        padding: 80px 180px 80px 70px;
+    }
+    
+    @media screen and (max-width: 870px) {
+        padding: 20px 80px 40px 20px;
+    }
+}
+
+.container--second-page {
+    padding-left: 300 / 1920 * 100%;
+    padding-right: 300 / 1920 * 100%;
+} 

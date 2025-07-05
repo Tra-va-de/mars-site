@@ -1,3 +1,5 @@
+@import "../fonts/Gputeks/stylesheets.css";
+
 html, body {
     font-family: $font-main;
     color: $text-color;
@@ -26,26 +28,4 @@ p, a, label, input, input::placeholder, button {
 
     @include adaptive-font($pc-font-size, $mobile-font-size);
     @include adaptive-line-height($pc-font-size * 1.5, $mobile-font-size);
-}
-
-.container {
-    padding: 80px 11% 80px 70px;
-    @extend %full-size;
-
-    @media screen and (max-width: 1300px) {
-        padding: 80px 15% 80px 70px;
-    }
-
-    @media screen and (min-width: 1921px) {
-        padding: 80px 180px 80px 70px;
-    }
-    
-    @media screen and (max-width: 870px) {
-        padding: 20px 80px 40px 20px;
-    }
-}
-
-.container--second-page {
-    padding-left: 300 / 1920 * 100%;
-    padding-right: 300 / 1920 * 100%;
-}
+} 
